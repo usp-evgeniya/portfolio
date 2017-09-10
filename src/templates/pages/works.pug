@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    -var title = 'Мои работы'
+
+block content
+    .works
+        .works__title
+            h1 Мои работы
+    .comments
+        .comments__title
+            h1 Что обо мне говорят
+        ul.comments__list
+            li.comments__item  
+                .comments__text
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat. Quos itaque corporis neque error obcaecati ea vitae, minus accusamus temporibus quae architecto optio cum repudiandae libero veniam.
+                .comments__person.comments__person--name Ковальчук Дмитрий
+                .comments__person.comments__person--occupation Основатель школы
