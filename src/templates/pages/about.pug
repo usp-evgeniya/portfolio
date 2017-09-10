@@ -3,15 +3,26 @@ extends ../template
 block variables
     -var title = 'Обо мне'
 
+block header
+    include ../common/header.pug
+
 block content
     .about
-        .about__title
+        .about__title.title
             h1 Обо мне
         .about__photo
             .img(src='')
-        .about__subtitle
+        .about__subtitle.subtitle
             h2 Кто я
         span.about__text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
-
+        .about__subtitle.subtitle
+            h2 Чем я могу быть вам полезен
+        span.about__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
+        ul.skills
+            li.skills__item Frontend
+            li.skills__item Backend
+            li.skills__item WorkFlow

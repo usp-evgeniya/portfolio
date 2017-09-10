@@ -1,0 +1,32 @@
+- 
+    var menuItems = [
+        {
+        title: "Мои работы", 
+        link: "/works.html"
+        },
+        {
+        title: "Блог", 
+        link: "/blog.html"
+        },
+        {
+        title: "Обо мне", 
+        link: "/about.html"
+        },
+        {
+        title: "Авторизация", 
+        link: "/index.html"
+        }
+    ]
+
+ul.socials__list
+    li.socials__item.socials__item--vk
+    li.socials__item.socials__item--gh
+    li.socials__item.socials__item--in
+.hamburger
+    .hamburger__open
+        ul.hamburger__list
+            each item in menuItems
+                li.hamburger__item
+                    a(href=`${item.link}`).hamburger__link #{item.title}
+    .hamburger__icon
+
