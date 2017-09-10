@@ -114,7 +114,7 @@ exports.images = images;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.clean = clean;
-exports.clean = server;
+exports.server = server;
 
 gulp.task('build', gulp.series(
     clean,

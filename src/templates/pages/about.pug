@@ -2,6 +2,21 @@ extends ../template
 
 block variables
     -var title = 'Обо мне'
+    - 
+        var skillsList = [
+            {
+            skillsGroup: "Frontend", 
+            skills: ["HTML5", "CSS3", "JavaScript & jQuery"]
+            },
+            {
+            skillsGroup: "Backend", 
+            skills: ["HTML5", "CSS3", "JavaScript & jQuery"]
+            },
+            {
+            skillsGroup: "Workflow", 
+            skills: ["HTML5", "CSS3", "JavaScript & jQuery"]
+            }
+        ]
 
 block header
     include ../common/header.pug
@@ -21,8 +36,10 @@ block content
             h2 Чем я могу быть вам полезен
         span.about__text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
         ul.skills
-            li.skills__item Frontend
-            li.skills__item Backend
-            li.skills__item WorkFlow
+            each item in skillsList
+                li.skills__group #{item.skillsGroup}
+                    ul.skills__list
+                        li.skills__item #{item.skills}
+
+
