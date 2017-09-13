@@ -11,75 +11,110 @@
     <script src="./js/main.min.js"></script>
   </head>
   <body>
-    <ul class="socials__list">
-      <li class="socials__item socials__item--vk"></li>
-      <li class="socials__item socials__item--gh"></li>
-      <li class="socials__item socials__item--in"></li>
-    </ul>
-    <div class="hamburger">
-      <div class="hamburger__open">
-        <ul class="hamburger__list">
-          <li class="hamburger__item"><a class="hamburger__link" href="/works.html">Мои работы</a></li>
-          <li class="hamburger__item"><a class="hamburger__link" href="/blog.html">Блог</a></li>
-          <li class="hamburger__item"><a class="hamburger__link" href="/about.html">Обо мне</a></li>
-          <li class="hamburger__item"><a class="hamburger__link" href="/index.html">Авторизация</a></li>
+    <header class="header">
+      <div class="socials socials__header">
+        <ul class="socials__list socials__list--header">
+          <li class="socials__item"><a class="socials__link--vk socials__link" href="#"></a></li>
+          <li class="socials__item"><a class="socials__link--gh socials__link" href="#"></a></li>
+          <li class="socials__item"><a class="socials__link--in socials__link" href="#"></a></li>
         </ul>
       </div>
-      <div class="hamburger__icon"></div>
-    </div>
-    <header class="header">
-      <div class="header__title">
-        <h1>Блог</h1>
-      </div>
-      <div class="subtitle">
-        <p>Статьи, которые я написал</p>
+      <div class="hamburger">
+        <button class="hamburger__icon" type="button"></button>
+        <nav class="hamburger__menu">
+          <ul class="hamburger__list">
+            <li class="hamburger__item"><a class=".hamburger__link--works hamburger__link" href="/works.html">Мои работы</a></li>
+            <li class="hamburger__item"><a class=".hamburger__link--blog hamburger__link" href="/blog.html">Блог</a></li>
+            <li class="hamburger__item"><a class=".hamburger__link--about hamburger__link" href="/about.html">Обо мне</a></li>
+            <li class="hamburger__item"><a class=".hamburger__link--auth hamburger__link" href="/index.html">Авторизация</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <nav class="blog-menu">
-      <ul class="blog-menu__list">
-        <li class="blog-menu__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-        <li class="blog-menu__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.  </li>
-        <li class="blog-menu__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-        <li class="blog-menu__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-      </ul>
-    </nav>
-    <div class="articles">
-      <ul class="articles__list">
-        <li class="articles__item">
-          <div class="articles__title">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-          </div>
-          <div class="articles__text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum tempore nulla. Praesentium, modi maiores enim, eveniet voluptate, animi veniam debitis ratione asperiores molestiae provident delectus deserunt amet fugit itaque?Dolorem, blanditiis adipisci, expedita eligendi quidem hic debitis aspernatur aut aperiam mollitia alias, tenetur impedit illo numquam quod! Quibusdam adipisci quia beatae animi molestiae magnam necessitatibus dolorum quos. Architecto, ipsum!Velit rem iure veniam laborum error blanditiis, maiores a nostrum odio minus non, repudiandae corporis cupiditate quia magnam eaque, et provident. Modi, quis libero illo recusandae consequatur corporis voluptates dignissimos?Doloremque illo perspiciatis consectetur placeat eaque quas, eum sit explicabo enim, omnis amet rem animi consequuntur corrupti sint architecto veritatis sunt provident assumenda rerum fugiat, officiis eveniet. Placeat, alias. Quis.Atque sunt, incidunt odit aliquam magni eos repellat soluta ut nam alias reiciendis veniam doloribus, laborum perspiciatis iure quo adipisci repudiandae rerum distinctio corporis, quibusdam ducimus veritatis? Omnis, itaque debitis.Enim, distinctio tempore! Quasi delectus ut incidunt deleniti nihil, distinctio, esse minima officia, quae doloremque ipsa repellat voluptates ipsum consequatur magnam a suscipit quas. Voluptate, molestias. In, quos. Modi, tempora!Reprehenderit facere fugit ullam numquam dolorem mollitia, inventore veritatis autem officiis ipsa expedita fuga tempore molestias, a velit commodi? Ab tenetur assumenda dicta. Quibusdam voluptas praesentium, sint ducimus doloremque sunt!Temporibus numquam odio reprehenderit voluptate maxime aut neque debitis accusantium! Natus nostrum, rem iste modi earum neque cum sit est fugit saepe, dolore magnam maxime commodi sint, placeat doloremque atque.Corrupti earum cum maiores tempore a quibusdam sint deleniti adipisci repellat eius id ut minus aspernatur delectus magni soluta, similique cupiditate incidunt neque esse expedita est! Commodi eaque quae expedita!Modi nemo doloribus assumenda vel doloremque dicta quidem sunt corporis maxime animi? Numquam architecto provident excepturi consectetur quasi! Voluptates placeat minus quae et dolores voluptatum maiores! Iure maiores totam ipsa.</p>
-          </div>
-        </li>
-        <li class="articles__item">
-          <div class="articles__title">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-          </div>
-          <div class="articles__text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum tempore nulla. Praesentium, modi maiores enim, eveniet voluptate, animi veniam debitis ratione asperiores molestiae provident delectus deserunt amet fugit itaque?Dolorem, blanditiis adipisci, expedita eligendi quidem hic debitis aspernatur aut aperiam mollitia alias, tenetur impedit illo numquam quod! Quibusdam adipisci quia beatae animi molestiae magnam necessitatibus dolorum quos. Architecto, ipsum!Velit rem iure veniam laborum error blanditiis, maiores a nostrum odio minus non, repudiandae corporis cupiditate quia magnam eaque, et provident. Modi, quis libero illo recusandae consequatur corporis voluptates dignissimos?Doloremque illo perspiciatis consectetur placeat eaque quas, eum sit explicabo enim, omnis amet rem animi consequuntur corrupti sint architecto veritatis sunt provident assumenda rerum fugiat, officiis eveniet. Placeat, alias. Quis.Atque sunt, incidunt odit aliquam magni eos repellat soluta ut nam alias reiciendis veniam doloribus, laborum perspiciatis iure quo adipisci repudiandae rerum distinctio corporis, quibusdam ducimus veritatis? Omnis, itaque debitis.Enim, distinctio tempore! Quasi delectus ut incidunt deleniti nihil, distinctio, esse minima officia, quae doloremque ipsa repellat voluptates ipsum consequatur magnam a suscipit quas. Voluptate, molestias. In, quos. Modi, tempora!Reprehenderit facere fugit ullam numquam dolorem mollitia, inventore veritatis autem officiis ipsa expedita fuga tempore molestias, a velit commodi? Ab tenetur assumenda dicta. Quibusdam voluptas praesentium, sint ducimus doloremque sunt!Temporibus numquam odio reprehenderit voluptate maxime aut neque debitis accusantium! Natus nostrum, rem iste modi earum neque cum sit est fugit saepe, dolore magnam maxime commodi sint, placeat doloremque atque.Corrupti earum cum maiores tempore a quibusdam sint deleniti adipisci repellat eius id ut minus aspernatur delectus magni soluta, similique cupiditate incidunt neque esse expedita est! Commodi eaque quae expedita!Modi nemo doloribus assumenda vel doloremque dicta quidem sunt corporis maxime animi? Numquam architecto provident excepturi consectetur quasi! Voluptates placeat minus quae et dolores voluptatum maiores! Iure maiores totam ipsa.</p>
-          </div>
-        </li>
-        <li class="articles__item">
-          <div class="articles__title">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-          </div>
-          <div class="articles__text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum tempore nulla. Praesentium, modi maiores enim, eveniet voluptate, animi veniam debitis ratione asperiores molestiae provident delectus deserunt amet fugit itaque?Dolorem, blanditiis adipisci, expedita eligendi quidem hic debitis aspernatur aut aperiam mollitia alias, tenetur impedit illo numquam quod! Quibusdam adipisci quia beatae animi molestiae magnam necessitatibus dolorum quos. Architecto, ipsum!Velit rem iure veniam laborum error blanditiis, maiores a nostrum odio minus non, repudiandae corporis cupiditate quia magnam eaque, et provident. Modi, quis libero illo recusandae consequatur corporis voluptates dignissimos?Doloremque illo perspiciatis consectetur placeat eaque quas, eum sit explicabo enim, omnis amet rem animi consequuntur corrupti sint architecto veritatis sunt provident assumenda rerum fugiat, officiis eveniet. Placeat, alias. Quis.Atque sunt, incidunt odit aliquam magni eos repellat soluta ut nam alias reiciendis veniam doloribus, laborum perspiciatis iure quo adipisci repudiandae rerum distinctio corporis, quibusdam ducimus veritatis? Omnis, itaque debitis.Enim, distinctio tempore! Quasi delectus ut incidunt deleniti nihil, distinctio, esse minima officia, quae doloremque ipsa repellat voluptates ipsum consequatur magnam a suscipit quas. Voluptate, molestias. In, quos. Modi, tempora!Reprehenderit facere fugit ullam numquam dolorem mollitia, inventore veritatis autem officiis ipsa expedita fuga tempore molestias, a velit commodi? Ab tenetur assumenda dicta. Quibusdam voluptas praesentium, sint ducimus doloremque sunt!Temporibus numquam odio reprehenderit voluptate maxime aut neque debitis accusantium! Natus nostrum, rem iste modi earum neque cum sit est fugit saepe, dolore magnam maxime commodi sint, placeat doloremque atque.Corrupti earum cum maiores tempore a quibusdam sint deleniti adipisci repellat eius id ut minus aspernatur delectus magni soluta, similique cupiditate incidunt neque esse expedita est! Commodi eaque quae expedita!Modi nemo doloribus assumenda vel doloremque dicta quidem sunt corporis maxime animi? Numquam architecto provident excepturi consectetur quasi! Voluptates placeat minus quae et dolores voluptatum maiores! Iure maiores totam ipsa.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <footer class="footer">
-      <nav class="footer__menu">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="/works.html">Мои работы</a></li>
-          <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
-          <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
-          <li class="menu__item"><a class="menu__link" href="/index.html">Авторизация</a></li>
+    <main class="main main__blog">
+      <section class="section hero">
+        <div class="hero__title">
+          <h1>Блог</h1>
+        </div>
+        <div class="subtitle">
+          <p>Статьи, которые я написала</p>
+        </div>
+      </section>
+      <nav class="blog-menu">
+        <ul class="blog-menu__list">
+          <li class="blog-menu__item">Второй курс по веб-разработке. Неделя первая</li>
+          <li class="blog-menu__item">Второй курс по веб-разработке. Неделя вторая</li>
+          <li class="blog-menu__item">Второй курс по веб-разработке. Неделя третья</li>
+          <li class="blog-menu__item">Второй курс по веб-разработке. Неделя четвертая</li>
+          <li class="blog-menu__item">Второй курс по веб-разработке. Неделя пятая</li>
         </ul>
       </nav>
+      <section class="articles">
+        <ul class="articles__list">
+          <li class="articles__item">
+            <h2 class="articles__title subtitle">Второй курс по веб-разработке. Неделя первая</h2>
+            <div class="articles__date">30 июля 2017</div>
+            <div class="articles__text">
+              <p>Ну что, первый курс оказался успешным) Интересно, как пройдет второй?) На неделю нам, как обычно, выдали техническое задание – подготовить три секции лендинга. Я с увлечением взялась за вёрстку – хотелось опробовать то, что изучили на первом курсе, получить первый результат. В итоге, к вечеру среды я сделала большую часть технического задания, опубликовала проект - https://usp-evgeniya.github.io/burgers/. Чуть позже внесла правки после проверки Оли (моего наставника - Ольга Болотова ) и, довольная, успокоилась) Вебинары у нас сейчас 3 раза в неделю – понедельник, среда и пятница – интенсивный процесс. И нужно внедрять в проект то, что там узнаешь, а лучше предвосхищать их, разбираться заранее. В пятницу я пропустила вебинар - была на встрече выпускников Loftschool, познакомилась, пообщалась с организаторами и учениками вживую. Ничто, конечно, не заменит живого общения!) И вот, что вы думаете, вечером вижу сообщения ребят с потока о том, что все надо переделывать – “пропадайте, выходные!” Я насторожилась, но не было возможности посмотреть, в чем же дело, да и суббота пролетела незаметно на IT конференции Konnect. А сегодня я сама весь день сидела, разбиралась с темой препроцессоров, flexbox, относительными единицами и т.д. Стала вносить новые фишки в проект, вёрстка разъехалась, теперь нужно чинить. Да, не расслабишься тут) Посмотрим теперь, что будет дальше)</p>
+            </div>
+          </li>
+          <li class="articles__item">
+            <h2 class="articles__title subtitle">Второй курс по веб-разработке. Неделя вторая</h2>
+            <div class="articles__date">7 августа 2017</div>
+            <div class="articles__text">
+              <p>Код не всегда себя ведет так, как тебе хочется. И не всегда ты получаешь тот результат, который хочешь увидеть. Порой кажется, что нужны танцы с бубнами, не иначе, чтобы всё заработало. Неделя непростая, но крайне интересная - flexbox, адаптив, svg - темы недели. Хочется делать классно. Хочется делать быстро. А пока медленно, но верно, я продвигаюсь к цели. Три вебинара на неделе - серьёзная нагрузка (особенно в сравнении с прошлым курсом, где их было два). Да и техническое задание недели впечатлило сразу же, как я его увидела. Отстала от графика - важно сосредоточиться) Я знаю, что я всё равно преодолею препятствия на пути и достигну цели. Я умею достигать цели, я умею работать на результат. Мой сегодняшний забег на 5 км это тоже показал. Трасса была хитрая - сплошь спуски и подъёмы в Парке Победы, но я всё равно побила свой рекорд на 5 км со временем 29:24. Символично, Парк Победы - так нужно побеждать - идти вперед и достигать целей!)</p>
+            </div>
+          </li>
+          <li class="articles__item">
+            <h2 class="articles__title subtitle">Второй курс по веб-разработке. Неделя третья</h2>
+            <div class="articles__date">14 августа 2017</div>
+            <div class="articles__text">
+              <p>Ну что сказать? Это не неделя, это американские горки по части эмоций! В понедельник - подъём. Делала адаптив, радовалась сайтику, проверяя его работу и на планшете, и на телефоне) Радость сменилась растерянностью, когда Vanilla JavaScript взорвал мозг, с работой не успевала читать методички, в срок делать задачки. В среду в середине вебинара казалось, что это вообще тёмный лес, и нет шансов. В конце вебинара появилась надежда, что всё-таки ещё не всё потеряно, нужно просто найти время. В среду организм довела, не выдержал нагрузок. Полчетверга провела у врачей. Второй месяц уже в режиме нон-стоп, хоть и с любимым делом. В итоге, учёба стояла на месте, а я расстраивалась. В пятницу после вебинара по jQuery стало яснее, созрело взвешенное решение, что или я посвящу день учёбе в субботу, или на следующей неделе снежный ком только накрутится. В субботу дочитала методички, поразбирала примеры, задачи. Самочувствие намного лучше, спасибо организму, а Js стал находить место в картине мира) Вспомнила свой любимый Visual Basic, алгоритмы, циклы, условия. Они с Js в чем-то похожи, хотя и разные. Спасибо моему прошлому небольшому опыту. В воскресенье, пока Милый ставил рекорды в Полумарафоне, я сидела в парке у фонтана и верстала проект. Шаг за шагом, тэг за тэгом, блок за блоком) Ну что сказать? Нужно помнить, что я не дух, а живой человек, и с этой мыслью уже действовать, двигаться дальше и развиваться! Здоровье, профессиональное развитие и близкие рядом - вот, что очень важно в жизни!)</p>
+            </div>
+          </li>
+          <li class="articles__item">
+            <h2 class="articles__title subtitle">Второй курс по веб-разработке. Неделя четвертая</h2>
+            <div class="articles__date">21 августа 2017</div>
+            <div class="articles__text">
+              <p>Эта неделя ознаменовалась фразой из известного фильма – «Москва не сразу строилась». Постепенно, шаг за шагом я обретаю новые профессиональные навыки, открываю еще более эффективные методы работы, совершенствуюсь с каждым днем, становлюсь сильнее. Важно помнить, что дорогу осилит идущий. Что радует, мир IT становится более привычным, новые технологии вдохновляют, а качество моей работы ещё больше растет. И сколько бы негодования не вызывал у меня JavaScript на этой неделе, проект все равно движется вперед, обретает новые фишечки, становится красивее, удобнее и эффективнее. Это, конечно, очень согревает. Здесь и адаптив, и слайдеры, и меню-гамбургер, и удобно раскрывающиеся меню в виде аккордеонов, и интерактивная карта. Убедитесь сами) https://usp-evgeniya.github.io/burgers/ Осталось еще немного, и можно будет отпускать “Mr. Burger” в большую жизнь) Мне уже хочется реализовывать новые проекты, внедрять в них все то полезное, что я узнала. Хочется, чтобы красивых, удобных, качественных сайтов становилось все больше! А если у вас есть потребность в создании сайта или его модернизации, мы можем вместе продуктивно поработать и, в результате, получить много довольных людей – пользователей сайта и ваших клиентов. </p>
+            </div>
+          </li>
+          <li class="articles__item">
+            <h2 class="articles__title subtitle">Второй курс по веб-разработке. Неделя пятая</h2>
+            <div class="articles__date">28 августа 2017</div>
+            <div class="articles__text">
+              <p>Вот и завершился второй курс. Диплом А класса, что очень приятно, и много усилий на достижение результата) А чем дороже в плане усилий нам достается какой-то результат, тем ценнее он становится). По итогам курса, получился вкусный адаптивный лендинг со слайдером, раскрывающимися меню, всплывашками, интерактивной картой и без линеек прокрутки - каждая секция целиком отображается на экране. Переходы на секции есть и сверху из меню, и через точки сбоку, и по кнопкам вверх/вниз по клавиатуре, и по колесику мыши. И переходы все плавные) Если загрузить сайт на хостинг, будет также работать форма приема заказов, т.к. все настройки для этого сделаны. Приятно) Сейчас после сдачи проекта чувствуется небольшая усталость и большое чувство удовлетворения) А сколько всего было за эти пять недель! Спасибо всем, кто поддерживал меня, спасибо Оле (Ольга Болотова) , моему наставнику, которая следила за прогрессом, контролировала качество кода и давала тонкие подсказки для лучшего прогресса. Легко не было, но было интересно!) Теперь я знаю, что я умею делать не просто интересные качественные сайты, но такие красивые, функциональные и удобные. А если вам понадобится моя помощь с разработкой сайта, я всегда буду рада помочь! С вами на связи!) colibri-web.ru P.S. Сайт можно посмотреть на Github) https://usp-evgeniya.github.io/burgers/</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__raw">
+        <nav class="footer__menu">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="/works.html">Мои работы</a></li>
+              <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
+              <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
+              <li class="menu__item"><a class="menu__link" href="/index.html">Авторизация</a></li>
+            </ul>
+          </nav>
+        </nav>
+        <div class="socials footer__socials">
+          <ul class="socials__list socials__list--header">
+            <li class="socials__item"><a class="socials__link--vk socials__link" href="#"></a></li>
+            <li class="socials__item"><a class="socials__link--gh socials__link" href="#"></a></li>
+            <li class="socials__item"><a class="socials__link--in socials__link" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__info">
+          <div class="footer__info-text">Я веб-разработчик из Москвы. Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
+        </div>
+        <div class="footer__copyright copyright">&#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017</div>
+      </div>
     </footer>
   </body>
 </html>

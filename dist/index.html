@@ -11,21 +11,31 @@
     <script src="./js/main.min.js"></script>
   </head>
   <body>
-    <div class="content">
-      <div class="photo"></div>
-      <div class="title">
-        <h1>Владимир Астахов</h1>
+    <main class="main main__intro">
+      <div class="intro">
+        <button class="auth intro__auth" type="button">Авторизоваться</button>
+        <div class="intro__welcome">
+          <div class="intro__owner owner">
+            <div class="owner__photo"><img class="owner__img" src=""></div>
+            <h2 class="owner__title">Евгения Морозова</h2><span class="owner__description">Личный сайт веб-разработчика</span>
+          </div>
+          <div class="socials intro__socials">
+            <ul class="socials__list socials__list--header">
+              <li class="socials__item"><a class="socials__link--vk socials__link" href="#"></a></li>
+              <li class="socials__item"><a class="socials__link--gh socials__link" href="#"></a></li>
+              <li class="socials__item"><a class="socials__link--in socials__link" href="#"></a></li>
+            </ul>
+          </div>
+          <nav class="menu intro__menu">
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="/works.html">Мои работы</a></li>
+              <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
+              <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="copyright intro__copyright">&#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017</div>
       </div>
-    </div>
-    <footer class="footer">
-      <nav class="footer__menu">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="/works.html">Мои работы</a></li>
-          <li class="menu__item"><a class="menu__link" href="/about.html">Обо мне</a></li>
-          <li class="menu__item"><a class="menu__link" href="/blog.html">Блог</a></li>
-          <li class="menu__item"><a class="menu__link" href="/index.html">Авторизация</a></li>
-        </ul>
-      </nav>
-    </footer>
+    </main>
   </body>
 </html>

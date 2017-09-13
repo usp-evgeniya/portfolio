@@ -4,7 +4,36 @@ block variables
     - var title = 'Портфолио - Главная страница'
 
 block content
-    .content
-        .photo
-        .title
-            h1 Владимир Астахов
+    main.main.main__intro
+        .intro
+            button(type="button").auth.intro__auth Авторизоваться
+            .intro__welcome
+                .intro__owner.owner
+                    .owner__photo
+                        img(src="").owner__img
+                    h2.owner__title Евгения Морозова
+                    span.owner__description Личный сайт веб-разработчика
+                .socials.intro__socials
+                    include ../common/socials.pug
+                nav.menu.intro__menu
+                    - 
+                        var menuItems = [
+                            {
+                            title: "Мои работы", 
+                            link: "/works.html"
+                            },
+                            {
+                            title: "Обо мне", 
+                            link: "/about.html"
+                            },
+                            {
+                            title: "Блог", 
+                            link: "/blog.html"
+                            }
+                        ]
+
+                    ul.menu
+                        each item in menuItems
+                            li.menu__item
+                                a(href=`${item.link}`).menu__link #{item.title}
+            .copyright.intro__copyright &#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017

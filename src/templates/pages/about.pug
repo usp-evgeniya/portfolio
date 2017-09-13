@@ -10,36 +10,73 @@ block variables
             },
             {
             skillsGroup: "Backend", 
-            skills: ["HTML5", "CSS3", "JavaScript & jQuery"]
+            skills: ["PHP", "MySQL", "Node.js & npm", "Mongo.db"]
             },
             {
             skillsGroup: "Workflow", 
-            skills: ["HTML5", "CSS3", "JavaScript & jQuery"]
+            skills: ["Git", "Gulp", "Bower", "Webpack"]
             }
+        ]
+    -
+        var contactsList = [
+            {
+            type: "skype", 
+            contact: "humming-bird7"
+            },
+            {
+            type: "email", 
+            contact: "morozovaey@gmail.com"
+            },
+            {
+            type: "phone", 
+            contact: "+7(916)412-07-02"
+            },
+            {
+            type: "address", 
+            contact: "г. Москва, ул. Усиевича, д. 1"
+            },          
         ]
 
 block header
     include ../common/header.pug
 
 block content
-    .about
-        .about__title.title
-            h1 Обо мне
-        .about__photo
-            .img(src='')
-        .about__subtitle.subtitle
-            h2 Кто я
-        span.about__text
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
-        .about__subtitle.subtitle
-            h2 Чем я могу быть вам полезен
-        span.about__text
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
-        ul.skills
-            each item in skillsList
-                li.skills__group #{item.skillsGroup}
-                    ul.skills__list
-                        li.skills__item #{item.skills}
+    main.main.main__about
+        include ../common/hero.pug
+        section.section.content
+            .about
+                .about__triangle.triangle
+                    svg.triangle__img.triangle__img--white
+                h1.about__title.title Обо мне
+                .about__title-en about
+                .about__content
+                    .about__photo
+                        .img(src='')
+                    h2.about__subtitle.subtitle Кто я
+                    span.about__text.text
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
+            .skills
+                .skills__triangle.triangle
+                    svg.triangle__img.triangle__img--beige
+                h2.skills__subtitle.subtitle Чем я могу быть вам полезна
+                span.skills__text.text
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
+                ul.skills__list
+                    each item in skillsList
+                        li.skills__group #{item.skillsGroup}
+                            ul.skills__details
+                                each skill in item.skills
+                                    li.skill 
+                                        svg.skill__circle
+                                        .skill__title #{skill}
+        section.section.map
+            .map__img
+            .contacts
+                .contacts__subtitle.subtitle
+                    h2 Контакты
+                ul.contacts
+                    each item in contactsList
+                        li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
 
-
+    include ../common/footer.pug

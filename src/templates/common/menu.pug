@@ -18,7 +18,8 @@
         }
     ]
 
-ul.menu
-    each item in menuItems
-        li.menu__item
-            a(href=`${item.link}`).menu__link #{item.title}
+nav.menu
+    ul.menu__list
+        each item in menuItems
+            li.menu__item
+                a(href=`${item.link}`).menu__link #{item.title}

@@ -7,15 +7,25 @@ block header
     include ../common/header.pug
 
 block content
-    .works
-        .works__title
-            h1 Мои работы
-    .comments
-        .comments__title
-            h1 Что обо мне говорят
-        ul.comments__list
-            li.comments__item  
-                .comments__text
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat. Quos itaque corporis neque error obcaecati ea vitae, minus accusamus temporibus quae architecto optio cum repudiandae libero veniam.
-                .comments__person.comments__person--name Ковальчук Дмитрий
-                .comments__person.comments__person--occupation Основатель школы
+    main.main.main__works
+        include ../common/hero.pug
+        section.section.works
+            .works__triangles
+                .works__triangle.triangle
+                    svg.triangle__img.triangle__img--left
+                .works__triangle.triangle
+                    svg.triangle__img.triangle__img--right
+            h1.works__title Мои работы
+            .works__title-en works
+        section.comments
+            h1.comments__title Что обо мне говорят
+            .comments__title about
+            ul.comments__list
+                li.comments__item  
+                    .comments__text
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat. Quos itaque corporis neque error obcaecati ea vitae, minus accusamus temporibus quae architecto optio cum repudiandae libero veniam.
+                    .comments__photo
+                        img(src="").comments__img
+                    .comments__person.comments__person--name Ковальчук Дмитрий
+                    .comments__person.comments__person--occupation Основатель школы
+    include ../common/footer.pug
