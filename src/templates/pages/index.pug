@@ -5,7 +5,7 @@ block variables
 
 block content
     main.main.main__intro
-        .intro
+        section.intro
             button(type="button").auth.intro__auth Авторизоваться
             .intro__welcome
                 .intro__owner.owner
@@ -36,4 +36,28 @@ block content
                         each item in menuItems
                             li.menu__item
                                 a(href=`${item.link}`).menu__link #{item.title}
+        section.auth
+            .auth-form
+                .auth-form__subtitle.subtitle Авторизоваться
+                form(action="server.php" method="post").form#form
+                    input.form__input(type="text" placeholder="Логин" name="login" required)
+                    input.form__input(type="password" placeholder="Пароль" name="password" required)
+                    label.form__captcha
+                        input.form__checkbox(type="checkbox" name="captcha")
+                        span.form__checkbox-fake
+                        span.form__caption.form__checkbox-caption Я человек
+                    .form__radios
+                        span.form__caption.form__caption--question Вы точно не робот?
+                        label.form__radio
+                            input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Да" checked)
+                            span.form__radio-fake
+                            span.form__caption.form__radio-caption Да
+                        label.form__radio
+                            input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Не уверен")
+                            span.form__radio-fake
+                            span.form__caption.form__radio-caption Не уверен
+                    .form__buttons
+                        button.form__button.form__button--home(type="button" name="home") На главную
+                        button.form__button.form__button--auth(type="button" name="auth-btn") Войти
+        section.copyright
             .copyright.intro__copyright &#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017

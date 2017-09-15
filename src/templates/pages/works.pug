@@ -2,6 +2,42 @@ extends ../template
 
 block variables
     -var title = 'Мои работы'
+        - 
+            var worksList = [
+                {
+                subtitle: "Сайт школы онлайн образования", 
+                techs: "HTML5, CSS3, JavaScript & jQuery",
+                link: "#",
+                img: "#"
+                },
+                {
+                subtitle: "Сайт школы онлайн образования", 
+                techs: "HTML5, CSS3, JavaScript & jQuery",
+                link: "#",
+                img: "#"
+                },
+                {
+                subtitle: "Сайт школы онлайн образования", 
+                techs: "HTML5, CSS3, JavaScript & jQuery",
+                link: "#",
+                img: "#"
+                }
+            ]
+        - 
+            var commentsList = [
+                {
+                comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.", 
+                person: "Ковальчук Дмитрий",
+                occupation: "Основатель школы",
+                img: "#"
+                },
+                {
+                comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.", 
+                person: "Болотова Ольга",
+                occupation: "Наставник группы",
+                img: "#"
+                }
+            ]
 
 block header
     include ../common/header.pug
@@ -15,17 +51,43 @@ block content
                     svg.triangle__img.triangle__img--left
                 .works__triangle.triangle
                     svg.triangle__img.triangle__img--right
-            h1.works__title Мои работы
-            .works__title-en works
+            .works__titles
+                h1.works__title Мои работы
+                .works__title-en works
+            ul.works__list
+                each item in worksList
+                    .works__block.works__description
+                        h2.works__subtitle.subtitle #{item.subtitle}
+                        .works__techs #{item.techs}
+                        .a(href=`${item.link}`).works__link
+                    .works__block.works__example
+                        .works__photo
+                            img(src=`${item.img}`).works__img
+                        button(type="button").button__next
+                            img(src=`${item.img}`).works__img
+                        button(type="button").button__prev
+                            img(src=`${item.img}`).works__img
         section.comments
-            h1.comments__title Что обо мне говорят
-            .comments__title about
+            .comments__titles
+                h1.comments__title Что обо мне говорят
+                .comments__title about
             ul.comments__list
-                li.comments__item  
-                    .comments__text
-                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat. Quos itaque corporis neque error obcaecati ea vitae, minus accusamus temporibus quae architecto optio cum repudiandae libero veniam.
-                    .comments__photo
-                        img(src="").comments__img
-                    .comments__person.comments__person--name Ковальчук Дмитрий
-                    .comments__person.comments__person--occupation Основатель школы
+                each item in commentsList
+                    li.comments__item  
+                        .comments__text
+                            p #{item.comment}
+                        .comments__photo
+                            img(src=`${item.img}`).comments__img
+                        .comments__person.comments__person--name #{item.person}
+                        .comments__person.comments__person--occupation #{item.occupation}
+        section.contact-form
+            .contact-form__subtitle.subtitle Связаться со мной
+            form(action="server.php" method="post").form#form
+                input.form__input(type="text" placeholder="Имя" name="name" required)
+                input.form__input(type="text" placeholder="Email" name="email")
+                textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
+                .form__buttons
+                    button.from__button.from__button--submit(type="submit" name="submit")
+                    button.form__button.from__button--reset(type="reset" name="reset")
+            button.arrow-up
     include ../common/footer.pug

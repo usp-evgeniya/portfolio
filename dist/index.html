@@ -8,11 +8,12 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./css/styles.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;amp;subset=cyrillic">
     <script src="./js/main.min.js"></script>
   </head>
   <body>
     <main class="main main__intro">
-      <div class="intro">
+      <section class="intro">
         <button class="auth intro__auth" type="button">Авторизоваться</button>
         <div class="intro__welcome">
           <div class="intro__owner owner">
@@ -34,8 +35,34 @@
             </ul>
           </nav>
         </div>
+      </section>
+      <section class="auth">
+        <div class="auth-form">
+          <div class="auth-form__subtitle subtitle">Авторизоваться</div>
+          <form class="form" action="server.php" method="post" id="form">
+            <input class="form__input" type="text" placeholder="Логин" name="login" required>
+            <input class="form__input" type="password" placeholder="Пароль" name="password" required>
+            <label class="form__captcha">
+              <input class="form__checkbox" type="checkbox" name="captcha"><span class="form__checkbox-fake"></span><span class="form__caption form__checkbox-caption">Я человек</span>
+            </label>
+            <div class="form__radios"><span class="form__caption form__caption--question">Вы точно не робот?</span>
+              <label class="form__radio">
+                <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Да" checked><span class="form__radio-fake"></span><span class="form__caption form__radio-caption">Да</span>
+              </label>
+              <label class="form__radio">
+                <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Не уверен"><span class="form__radio-fake"></span><span class="form__caption form__radio-caption">Не уверен</span>
+              </label>
+            </div>
+            <div class="form__buttons">
+              <button class="form__button form__button--home" type="button" name="home">На главную</button>
+              <button class="form__button form__button--auth" type="button" name="auth-btn">Войти</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="copyright">
         <div class="copyright intro__copyright">&#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017</div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

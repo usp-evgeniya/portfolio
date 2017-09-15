@@ -8,6 +8,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./css/styles.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;amp;subset=cyrillic">
     <script src="./js/main.min.js"></script>
   </head>
   <body>
@@ -51,22 +52,79 @@
             <svg class="triangle__img triangle__img--right"></svg>
           </div>
         </div>
-        <h1 class="works__title">Мои работы</h1>
-        <div class="works__title-en">works</div>
+        <div class="works__titles">
+          <h1 class="works__title">Мои работы</h1>
+          <div class="works__title-en">works</div>
+        </div>
+        <ul class="works__list">
+          <div class="works__block works__description">
+            <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
+            <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
+            <div class="a works__link" href="#"></div>
+          </div>
+          <div class="works__block works__example">
+            <div class="works__photo"><img class="works__img" src="#"></div>
+            <button class="button__next" type="button"><img class="works__img" src="#"></button>
+            <button class="button__prev" type="button"><img class="works__img" src="#"></button>
+          </div>
+          <div class="works__block works__description">
+            <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
+            <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
+            <div class="a works__link" href="#"></div>
+          </div>
+          <div class="works__block works__example">
+            <div class="works__photo"><img class="works__img" src="#"></div>
+            <button class="button__next" type="button"><img class="works__img" src="#"></button>
+            <button class="button__prev" type="button"><img class="works__img" src="#"></button>
+          </div>
+          <div class="works__block works__description">
+            <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
+            <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
+            <div class="a works__link" href="#"></div>
+          </div>
+          <div class="works__block works__example">
+            <div class="works__photo"><img class="works__img" src="#"></div>
+            <button class="button__next" type="button"><img class="works__img" src="#"></button>
+            <button class="button__prev" type="button"><img class="works__img" src="#"></button>
+          </div>
+        </ul>
       </section>
       <section class="comments">
-        <h1 class="comments__title">Что обо мне говорят</h1>
-        <div class="comments__title">about</div>
+        <div class="comments__titles">
+          <h1 class="comments__title">Что обо мне говорят</h1>
+          <div class="comments__title">about</div>
+        </div>
         <ul class="comments__list">
           <li class="comments__item"> 
             <div class="comments__text">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat. Quos itaque corporis neque error obcaecati ea vitae, minus accusamus temporibus quae architecto optio cum repudiandae libero veniam.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.</p>
             </div>
-            <div class="comments__photo"><img class="comments__img" src=""></div>
+            <div class="comments__photo"><img class="comments__img" src="#"></div>
             <div class="comments__person comments__person--name">Ковальчук Дмитрий</div>
             <div class="comments__person comments__person--occupation">Основатель школы</div>
           </li>
+          <li class="comments__item"> 
+            <div class="comments__text">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.</p>
+            </div>
+            <div class="comments__photo"><img class="comments__img" src="#"></div>
+            <div class="comments__person comments__person--name">Болотова Ольга</div>
+            <div class="comments__person comments__person--occupation">Наставник группы</div>
+          </li>
         </ul>
+      </section>
+      <section class="contact-form">
+        <div class="contact-form__subtitle subtitle">Связаться со мной</div>
+        <form class="form" action="server.php" method="post" id="form">
+          <input class="form__input" type="text" placeholder="Имя" name="name" required>
+          <input class="form__input" type="text" placeholder="Email" name="email">
+          <textarea class="form__input form__input--textarea" type="text" placeholder="Ваше сообщение" name="message"></textarea>
+          <div class="form__buttons">
+            <button class="from__button from__button--submit" type="submit" name="submit"></button>
+            <button class="form__button from__button--reset" type="reset" name="reset"></button>
+          </div>
+        </form>
+        <button class="arrow-up"></button>
       </section>
     </main>
     <footer class="footer">
