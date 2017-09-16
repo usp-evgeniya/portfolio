@@ -68,26 +68,29 @@ block content
                         button(type="button").button__prev
                             img(src=`${item.img}`).works__img
         section.comments
-            .comments__titles
-                h1.comments__title Что обо мне говорят
-                .comments__title about
-            ul.comments__list
-                each item in commentsList
-                    li.comments__item  
-                        .comments__text
-                            p #{item.comment}
-                        .comments__photo
-                            img(src=`${item.img}`).comments__img
-                        .comments__person.comments__person--name #{item.person}
-                        .comments__person.comments__person--occupation #{item.occupation}
+            .container
+                .comments__titles
+                    h1.comments__title Что обо мне говорят
+                    .comments__title about
+                ul.comments__list
+                    each item in commentsList
+                        li.comments__item  
+                            .comments__text
+                                p #{item.comment}
+                            .comments__photo
+                                img(src=`${item.img}`).comments__img
+                            .comments__person.comments__person--name #{item.person}
+                            .comments__person.comments__person--occupation #{item.occupation}
         section.contact-form
-            .contact-form__subtitle.subtitle Связаться со мной
-            form(action="server.php" method="post").form#form
-                input.form__input(type="text" placeholder="Имя" name="name" required)
-                input.form__input(type="text" placeholder="Email" name="email")
-                textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
-                .form__buttons
-                    button.from__button.from__button--submit(type="submit" name="submit")
-                    button.form__button.from__button--reset(type="reset" name="reset")
-            button.arrow-up
+            .container
+                .contact-form__subtitle.subtitle Связаться со мной
+                form(action="server.php" method="post").form#form
+                    input.form__input(type="text" placeholder="Имя" name="name" required)
+                    input.form__input(type="text" placeholder="Email" name="email")
+                    textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
+                    .form__buttons
+                        button.from__button.from__button--submit(type="submit" name="submit")
+                        button.form__button.from__button--reset(type="reset" name="reset")
+                button.arrow-up
+block footer
     include ../common/footer.pug

@@ -1,1 +1,10 @@
-@import 'components/fonts.scss'
+// Layout
+
+@import "layout/fonts.scss";
+@import "layout/variables.scss";
+@import "layout/mixins.scss";
+@import "layout/base.scss";
+
+// Components
+
+@import "components/form.scss";

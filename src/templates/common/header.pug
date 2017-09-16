@@ -30,13 +30,14 @@
     ]
 
 header.header
-    .socials.socials__header
-        include ../common/socials.pug
-    .hamburger
-        button(type="button").hamburger__icon
-        nav.hamburger__menu
-            ul.hamburger__list
-                each item in menuItems
-                    li.hamburger__item
-                        a(href=`${item.link}` class=`.hamburger__link--${item.mod}`).hamburger__link #{item.title}
+    .container
+        .socials.socials__header
+            include ../common/socials.pug
+        .hamburger
+            button(type="button").hamburger__icon
+            nav.hamburger__menu
+                ul.hamburger__list
+                    each item in menuItems
+                        li.hamburger__item
+                            a(href=`${item.link}` class=`.hamburger__link--${item.mod}`).hamburger__link #{item.title}
 

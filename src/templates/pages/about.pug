@@ -43,7 +43,7 @@ block header
 block content
     main.main.main__about
         include ../common/hero.pug
-        section.section.content
+        section.section.content.container
             .about
                 .about__triangle.triangle
                     svg.triangle__img.triangle__img--white
@@ -72,11 +72,12 @@ block content
                                         .skill__title #{skill}
         section.section.map
             .map__img
-            .contacts
-                .contacts__subtitle.subtitle
-                    h2 Контакты
-                ul.contacts
-                    each item in contactsList
-                        li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
-
+            .container
+                .contacts
+                    .contacts__subtitle.subtitle
+                        h2 Контакты
+                    ul.contacts
+                        each item in contactsList
+                            li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
+block footer
     include ../common/footer.pug
