@@ -17,18 +17,24 @@ const gulp = require('gulp'),
     pug = require('gulp-pug'),
     //build
     del = require('del'),
-    browserSync = require('browser-sync').create()
+    browserSync = require('browser-sync').create(),
+    //sprite
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
+    svgSprite = require('gulp-svg-sprite'),
+    svgMin = require ('gulp-svgmin');
+    
     
 
 var paths = {
     styles: {
         src: 'src/styles/styles.scss',
-        watch: 'src/styles/*.scss',
+        watch: 'src/styles/**/*.scss',
         dest: 'dist/css/'
     },
     scripts: {
         src: 'src/scripts/main.js',
-        watch: 'src/scripts/*.js',
+        watch: 'src/scripts/**/*.js',
         dest: 'dist/js/'
     },
     templates: {
@@ -43,6 +49,10 @@ var paths = {
     fonts: {
         src: 'src/fonts/**/*.*',
         dest: 'dist/fonts/'
+    },
+    icons: {
+        src: 'src/images/icons/**/*.svg',
+        dest: 'dist/img/icons'
     }
 }
 
@@ -86,6 +96,37 @@ function fonts() {
 }
 
 
+const config = {
+    mode: {
+        symbol: {
+            sprite: "sprite.svg",
+        }
+    }
+};
+
+
+function sprite() {
+    return gulp.src(paths.icons.src)
+    .pipe(svgMin({
+        js2svg: {
+            pretty: true
+        }
+    }))
+    .pipe(cheerio({
+        run: function($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        },
+        parserOptions: {
+            xmlMode: true
+        }
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest(paths.icons.dest));
+}
+
 function clean() {
     return del('dist')
 }
@@ -95,6 +136,7 @@ function watch() {
     gulp.watch(paths.scripts.watch, scripts);
     gulp.watch(paths.templates.watch, templates);
     gulp.watch(paths.images.src, images);
+    gulp.watch(paths.icons.src, sprite);
     gulp.watch(paths.fonts.src, fonts)
 }
 
@@ -111,6 +153,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.templates = templates;
 exports.images = images;
+exports.sprite = sprite;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.clean = clean;
@@ -118,12 +161,12 @@ exports.server = server;
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(styles,scripts,templates,images,fonts)
+    gulp.parallel(styles,scripts,templates,images,sprite,fonts)
 ))
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles,scripts,templates,images,fonts),
+    gulp.parallel(styles,scripts,templates,images,sprite,fonts),
     gulp.parallel(watch,server)
 ))
 

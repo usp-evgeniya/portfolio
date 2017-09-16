@@ -5,12 +5,12 @@ block variables
 
 block content
     main.main.main__intro
-        section.intro.container
-            button(type="button").auth.intro__auth Авторизоваться
+        section.intro
+            button(type="button").intro__btn-auth Авторизоваться
             .intro__welcome
                 .intro__owner.owner
                     .owner__photo
-                        img(src="").owner__img
+                        img(src="img/content/My_image.jpg").owner__img
                     h2.owner__title Евгения Морозова
                     span.owner__description Личный сайт веб-разработчика
                 .socials.intro__socials
@@ -36,7 +36,7 @@ block content
                         each item in menuItems
                             li.menu__item
                                 a(href=`${item.link}`).menu__link #{item.title}
-        section.auth.container
+        section.auth
             .auth-form
                 .auth-form__subtitle.subtitle Авторизоваться
                 form(action="server.php" method="post").form#form
@@ -59,5 +59,5 @@ block content
                     .form__buttons
                         button.form__button.form__button--home(type="button" name="home") На главную
                         button.form__button.form__button--auth(type="button" name="auth-btn") Войти
-        section.copyright.container
-            .copyright.intro__copyright &#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017
+        .copyright.container
+            .copyright_text.intro__copyright &#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017

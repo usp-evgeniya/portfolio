@@ -22,13 +22,14 @@ body {
     font-style: normal;
     line-height: 1.42;
     font-size: 16px;
-    color: #455a64;
+    color: $grey;
     background-color: #fff;
 }
 
 .wrapper {
     overflow: hidden;
     width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -45,9 +46,28 @@ ul {
 }
 
 .title {
-
+    @include bernier;
+    font-size: 63px;
+    color: $black;
 }
 
 .subtitle {
-    
+    @include bernier;
+    font-size: 35px;
+    color: $grey;
+}
+
+p span {
+    @include roboto(500);
+    color: $marine;
+}
+
+p a {
+    color: #6da3bd;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+
 }
