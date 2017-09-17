@@ -37,47 +37,45 @@ block variables
             },          
         ]
 
-block header
-    include ../common/header.pug
-
 block content
-    main.main.main__about
-        include ../common/hero.pug
-        section.section.content.container
-            .about
-                .about__triangle.triangle
-                    svg.triangle__img.triangle__img--white
-                h1.about__title.title Обо мне
-                .about__title-en about
-                .about__content
-                    .about__photo
-                        .img(src='')
-                    h2.about__subtitle.subtitle Кто я
-                    span.about__text.text
+    .wrapper
+        include ../common/header.pug
+        main.main.main__about
+            include ../common/hero.pug
+            section.section.content.container
+                .about
+                    .about__triangle.triangle
+                        svg.triangle__img.triangle__img--white
+                    h1.about__title.title Обо мне
+                    .about__title-en about
+                    .about__content
+                        .about__photo
+                            .img(src='')
+                        h2.about__subtitle.subtitle Кто я
+                        span.about__text.text
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
+                .skills
+                    .skills__triangle.triangle
+                        svg.triangle__img.triangle__img--beige
+                    h2.skills__subtitle.subtitle Чем я могу быть вам полезна
+                    span.skills__text.text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. 
-            .skills
-                .skills__triangle.triangle
-                    svg.triangle__img.triangle__img--beige
-                h2.skills__subtitle.subtitle Чем я могу быть вам полезна
-                span.skills__text.text
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates veritatis culpa odit voluptatibus nulla sapiente esse rem dolorem ullam, quos, illo, hic maiores deleniti pariatur eius architecto tenetur! Veniam.Tempore impedit nemo quo facilis dolores quasi iste quae sed ipsum, eveniet ab autem accusantium accusamus est fugiat dolorum corporis esse non, illum in itaque atque et odio. Itaque, maxime.Quia pariatur ipsam praesentium. 
-                ul.skills__list
-                    each item in skillsList
-                        li.skills__group #{item.skillsGroup}
-                            ul.skills__details
-                                each skill in item.skills
-                                    li.skill 
-                                        svg.skill__circle
-                                        .skill__title #{skill}
-        section.section.map
-            .map__img
-            .container
-                .contacts
-                    .contacts__subtitle.subtitle
-                        h2 Контакты
-                    ul.contacts
-                        each item in contactsList
-                            li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
-block footer
+                    ul.skills__list
+                        each item in skillsList
+                            li.skills__group #{item.skillsGroup}
+                                ul.skills__details
+                                    each skill in item.skills
+                                        li.skill 
+                                            svg.skill__circle
+                                            .skill__title #{skill}
+            section.section.map
+                .map__img
+                .container
+                    .contacts
+                        .contacts__subtitle.subtitle
+                            h2 Контакты
+                        ul.contacts
+                            each item in contactsList
+                                li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
     include ../common/footer.pug

@@ -1,3 +1,122 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__subtitle {
+    margin-bottom: 30px;
+}
+
+.form__buttons {
+    width: 100%;
+    display: flex;
+}
+
 .form__button {
     @extend %btn;
+    width: 50%;
+    border-radius: 0;
+    opacity: 0.85;
+    border: 0px solid transparent;
+
+
+    &--home {
+        border-right: 2px solid #73cac2;
+    }
 }
+
+
+.form__label {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+
+    &--checkbox {
+        width: auto;
+
+
+    }
+}
+
+.form__caption {
+    margin-bottom: 10px;
+
+    &--checkbox {
+        margin-bottom: 0;
+    }
+
+    &--question {
+        font-weight: 600;
+        opacity: 0.8;
+    }
+
+}
+
+.form__id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(240, 239, 233);
+    align-self: stretch;
+    border-radius: 5px 0px 0px 5px;
+}
+ 
+
+.form__icon {
+    width: 18px;
+    height: 18px;
+    fill: #c4cbcd;
+
+    &:focus {
+        fill: $marine;
+    }
+}
+
+.form__inputs {
+    background-color: rgba(252,252,252,0.85);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.form__input {
+    padding: 12px 20px;
+    width: 300px;
+    @include roboto(400);
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    color: $black;
+    background-color: $white;
+
+    &:focus {
+        border: 1px solid $marine;
+
+        & .form__icon {
+            fill: $marine;
+        }
+    }
+
+    &:hover {
+        border: 1px solid $marine;
+
+        & .form__icon {
+            fill: $marine;
+        }
+    }
+
+    &::placeholder {
+        color: rgba(55,62,66,0.5);
+    }
+
+    &--auth {
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+

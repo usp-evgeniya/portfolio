@@ -32,29 +32,27 @@ block variables
                 }      
             ]
 
-block header
-    include ../common/header.pug
-
 block content
-    main.main.main__blog
-        section.section.hero
+    .wrapper
+        include ../common/header.pug
+        main.main.main__blog
+            section.section.hero
+                .container
+                    .hero__title
+                        h1 Блог
+                    .subtitle
+                        p Статьи, которые я написала
             .container
-                .hero__title
-                    h1 Блог
-                .subtitle
-                    p Статьи, которые я написала
-        .container
-            nav.blog-menu
-                ul.blog-menu__list
-                    each article in articlesList
-                        li.blog-menu__item #{article.title}
-            section.articles
-                ul.articles__list
-                    each item in articlesList
-                        li.articles__item
-                            h2.articles__title.subtitle #{item.title}
-                            .articles__date #{item.date}
-                            .articles__text
-                                p #{item.text}
-block footer
+                nav.blog-menu
+                    ul.blog-menu__list
+                        each article in articlesList
+                            li.blog-menu__item #{article.title}
+                section.articles
+                    ul.articles__list
+                        each item in articlesList
+                            li.articles__item
+                                h2.articles__title.subtitle #{item.title}
+                                .articles__date #{item.date}
+                                .articles__text
+                                    p #{item.text}
     include ../common/footer.pug

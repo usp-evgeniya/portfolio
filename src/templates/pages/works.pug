@@ -39,58 +39,56 @@ block variables
                 }
             ]
 
-block header
-    include ../common/header.pug
-
 block content
-    main.main.main__works
-        include ../common/hero.pug
-        section.section.works
-            .works__triangles
-                .works__triangle.triangle
-                    svg.triangle__img.triangle__img--left
-                .works__triangle.triangle
-                    svg.triangle__img.triangle__img--right
-            .works__titles
-                h1.works__title Мои работы
-                .works__title-en works
-            ul.works__list
-                each item in worksList
-                    .works__block.works__description
-                        h2.works__subtitle.subtitle #{item.subtitle}
-                        .works__techs #{item.techs}
-                        .a(href=`${item.link}`).works__link
-                    .works__block.works__example
-                        .works__photo
-                            img(src=`${item.img}`).works__img
-                        button(type="button").button__next
-                            img(src=`${item.img}`).works__img
-                        button(type="button").button__prev
-                            img(src=`${item.img}`).works__img
-        section.comments
-            .container
-                .comments__titles
-                    h1.comments__title Что обо мне говорят
-                    .comments__title about
-                ul.comments__list
-                    each item in commentsList
-                        li.comments__item  
-                            .comments__text
-                                p #{item.comment}
-                            .comments__photo
-                                img(src=`${item.img}`).comments__img
-                            .comments__person.comments__person--name #{item.person}
-                            .comments__person.comments__person--occupation #{item.occupation}
-        section.contact-form
-            .container
-                .contact-form__subtitle.subtitle Связаться со мной
-                form(action="server.php" method="post").form#form
-                    input.form__input(type="text" placeholder="Имя" name="name" required)
-                    input.form__input(type="text" placeholder="Email" name="email")
-                    textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
-                    .form__buttons
-                        button.from__button.from__button--submit(type="submit" name="submit")
-                        button.form__button.from__button--reset(type="reset" name="reset")
-                button.arrow-up
-block footer
+    .wrapper
+        include ../common/header.pug
+        main.main.main__works
+            include ../common/hero.pug
+            section.section.works
+                .works__triangles
+                    .works__triangle.triangle
+                        svg.triangle__img.triangle__img--left
+                    .works__triangle.triangle
+                        svg.triangle__img.triangle__img--right
+                .works__titles
+                    h1.works__title Мои работы
+                    .works__title-en works
+                ul.works__list
+                    each item in worksList
+                        .works__block.works__description
+                            h2.works__subtitle.subtitle #{item.subtitle}
+                            .works__techs #{item.techs}
+                            .a(href=`${item.link}`).works__link
+                        .works__block.works__example
+                            .works__photo
+                                img(src=`${item.img}`).works__img
+                            button(type="button").button__next
+                                img(src=`${item.img}`).works__img
+                            button(type="button").button__prev
+                                img(src=`${item.img}`).works__img
+            section.comments
+                .container
+                    .comments__titles
+                        h1.comments__title Что обо мне говорят
+                        .comments__title about
+                    ul.comments__list
+                        each item in commentsList
+                            li.comments__item  
+                                .comments__text
+                                    p #{item.comment}
+                                .comments__photo
+                                    img(src=`${item.img}`).comments__img
+                                .comments__person.comments__person--name #{item.person}
+                                .comments__person.comments__person--occupation #{item.occupation}
+            section.contact-form
+                .container
+                    .contact-form__subtitle.subtitle Связаться со мной
+                    form(action="server.php" method="post").form#form
+                        input.form__input(type="text" placeholder="Имя" name="name" required)
+                        input.form__input(type="text" placeholder="Email" name="email")
+                        textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
+                        .form__buttons
+                            button.from__button.from__button--submit(type="submit" name="submit")
+                            button.form__button.from__button--reset(type="reset" name="reset")
+                    button.arrow-up
     include ../common/footer.pug
