@@ -5,7 +5,7 @@ block variables
 
 
 block content
-    main.main.main__intro.active
+    main.main.main__intro
         section.intro
             button(type="button").intro__btn-auth Авторизоваться
             .intro__welcome
@@ -44,26 +44,28 @@ block content
                     .form__inputs
                         .form__subtitle.subtitle Авторизуйтесь
                         label.form__label
+                            input.form__input.form__input--auth(type="text" placeholder="Логин" name="login" required)
                             span.form__id
                                 svg.form__icon
                                     use(xlink:href="img/icons/symbol/sprite.svg#login")
-                            input.form__input.form__input--auth(type="text" placeholder="Логин" name="login" required)
                         label.form__label
+                            input.form__input.form__input--auth(type="password" placeholder="Пароль" name="password" required)
                             span.form__id
                                 svg.form__icon
                                     use(xlink:href="img/icons/symbol/sprite.svg#password")
-                            input.form__input.form__input--auth(type="password" placeholder="Пароль" name="password" required)
                         label.form__label.form__label--checkbox
                             input.form__checkbox(type="checkbox" name="captcha")
                             span.form__checkbox-fake
+                                svg.form__checkbox-icon
+                                    use(xlink:href="img/icons/symbol/sprite.svg#check")
                             span.form__caption.form__caption--checkbox Я человек
                         .form__radios
                             .form__caption.form__caption--question Вы точно не робот?
-                            label.form__radio
+                            label.form__label.form__label--radio.form__label--radioyes
                                 input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Да" checked)
                                 span.form__radio-fake
                                 span.form__caption.form__caption--radio Да
-                            label.form__radio
+                            label.form__label.form__label--radio.form__label--radiosure
                                 input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Не уверен")
                                 span.form__radio-fake
                                 span.form__caption.form__caption--radio Не уверен

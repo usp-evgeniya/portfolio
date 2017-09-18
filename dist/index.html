@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&amp;amp;subset=cyrillic">
   </head>
   <body>
-    <main class="main main__intro active">
+    <main class="main main__intro">
       <section class="intro">
         <button class="intro__btn-auth" type="button">Авторизоваться</button>
         <div class="intro__welcome">
@@ -52,27 +52,30 @@
           <form class="form" action="server.php" method="post" id="form">
             <div class="form__inputs">
               <div class="form__subtitle subtitle">Авторизуйтесь</div>
-              <label class="form__label"><span class="form__id">
+              <label class="form__label">
+                <input class="form__input form__input--auth" type="text" placeholder="Логин" name="login" required><span class="form__id">
                   <svg class="form__icon">
                     <use xlink:href="img/icons/symbol/sprite.svg#login"></use>
                   </svg></span>
-                <input class="form__input form__input--auth" type="text" placeholder="Логин" name="login" required>
               </label>
-              <label class="form__label"><span class="form__id">
+              <label class="form__label">
+                <input class="form__input form__input--auth" type="password" placeholder="Пароль" name="password" required><span class="form__id">
                   <svg class="form__icon">
                     <use xlink:href="img/icons/symbol/sprite.svg#password"></use>
                   </svg></span>
-                <input class="form__input form__input--auth" type="password" placeholder="Пароль" name="password" required>
               </label>
               <label class="form__label form__label--checkbox">
-                <input class="form__checkbox" type="checkbox" name="captcha"><span class="form__checkbox-fake"></span><span class="form__caption form__caption--checkbox">Я человек</span>
+                <input class="form__checkbox" type="checkbox" name="captcha"><span class="form__checkbox-fake">
+                  <svg class="form__checkbox-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#check"></use>
+                  </svg></span><span class="form__caption form__caption--checkbox">Я человек</span>
               </label>
               <div class="form__radios">
                 <div class="form__caption form__caption--question">Вы точно не робот?</div>
-                <label class="form__radio">
+                <label class="form__label form__label--radio form__label--radioyes">
                   <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Да" checked><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Да</span>
                 </label>
-                <label class="form__radio">
+                <label class="form__label form__label--radio form__label--radiosure">
                   <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Не уверен"><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Не уверен</span>
                 </label>
               </div>

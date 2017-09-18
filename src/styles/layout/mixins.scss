@@ -54,7 +54,7 @@
     }
 }
 
-%btn {
+%btn, %btn2 {
     display: inline-block;
     font-family: roboto, Verdana, Arial, sans-serif;
     font-size: rem(16px);
@@ -69,6 +69,7 @@
     border: 1px solid transparent;
     background-color: $marine;
     transition: background-color 0.5s;
+    outline: none;
     
     &:hover {
         background-color: $dark-marine;
@@ -76,20 +77,8 @@
 }
 
 %btn2 {
-    display: inline-block;
-    font-family: roboto, Verdana, Arial, sans-serif;
-    font-size: rem(16px);
-    font-weight: 500;
-    font-style: normal;
-    text-decoration: none;
-    color: $white;
-    padding: rem(10px) rem(30px);
-    line-height: rem(25px);
-    border-radius: rem(5px);
-    cursor: pointer;
     border: 1px solid $white;
     background-color: transparent;
-    transition: background-color 0.5s;
     
     &:hover {
         background-color: $white;
