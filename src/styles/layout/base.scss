@@ -48,12 +48,18 @@ ul {
     @include bernier;
     font-size: 63px;
     color: $black;
+    @extend %title-decor;
+    display: flex;
+    align-items: center;
 }
 
 .subtitle {
     @include bernier;
     font-size: 35px;
     color: $grey;
+    @extend %title-decor;
+    display: flex;
+    align-items: center;
 }
 
 p span {
