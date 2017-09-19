@@ -1,0 +1,25 @@
+.title {
+    @include bernier;
+    font-size: 63px;
+    color: $black;
+    @include title-decor($black);
+    display: flex;
+    align-items: center;
+}
+
+.subtitle {
+    @include bernier;
+    font-size: 35px;
+    color: $grey;
+    @include title-decor($black);
+    display: flex;
+    align-items: center;
+}
+
+.title__bg {
+    opacity: 0.07;
+
+    &--about {
+        fill: #6e7171;
+    }
+}

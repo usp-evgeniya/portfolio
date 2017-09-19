@@ -29,12 +29,19 @@ body {
 .wrapper {
     overflow: hidden;
     width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 150px;
+    grid-template-areas: 
+    "main"
+    "footer"
 }
 
 .container {
     max-width: 1180px;
     min-width: 300px;
-    width: 1180px;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -44,23 +51,12 @@ ul {
     list-style: none;
 }
 
-.title {
-    @include bernier;
-    font-size: 63px;
-    color: $black;
-    @extend %title-decor;
-    display: flex;
-    align-items: center;
+button, input {
+    outline: none;
+
 }
 
-.subtitle {
-    @include bernier;
-    font-size: 35px;
-    color: $grey;
-    @extend %title-decor;
-    display: flex;
-    align-items: center;
-}
+
 
 p span {
     @include roboto(500);

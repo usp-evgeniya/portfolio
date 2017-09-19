@@ -47,7 +47,8 @@ block content
                     .about__triangle.triangle
                         svg.triangle__img.triangle__img--white
                     h1.about__title.title Обо мне
-                    .about__title-en about
+                    svg.about__title-en
+                        use(xlink:href="img/icons/symbol/sprite.svg#about_header")
                     .about__content
                         .about__photo
                             .img(src='')
@@ -78,4 +79,4 @@ block content
                         ul.contacts
                             each item in contactsList
                                 li.contacts__item(class=`contacts__item--${item.type}`) #{item.contact}
-    include ../common/footer.pug
+        include ../common/footer.pug

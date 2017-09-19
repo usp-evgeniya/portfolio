@@ -1,0 +1,63 @@
+.hero {
+    grid-area: hero;
+    background: url('../img/bg/bg_header.jpg') 50% 0% no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.hero__bg-title {
+    fill: $white;
+    opacity: 0.06;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hero__owner {
+    color: $white;
+    z-index: 100;
+
+    & .owner__photo {
+        margin-top: 0px;
+    }
+    & .owner__description {
+        @include roboto(300);
+    }
+}
+
+.hero__arrow-btn {
+    border: 1px solid transparent;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.hero__arrow-down {
+    fill: $white;
+    opacity: 0.7;
+    width: 26px;
+    height: 17px;
+
+
+}

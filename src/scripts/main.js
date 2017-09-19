@@ -14,4 +14,13 @@ $(document).ready(function () {
             mainIntro.removeClass('active');
         });
     });
+
+    $(function(){
+        var hamburger = $('.hamburger');
+        $('.hamburger__btn').on('click',function (e) {
+            e.preventDefault();
+            hamburger.toggleClass('active');
+        });
+
+    });
 });

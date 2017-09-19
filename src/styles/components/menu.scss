@@ -1,3 +1,19 @@
 .menu__link {
-    border-radius: 0;
+    text-decoration: none;
+    @include roboto(500);
+    color: $white;
+}
+
+
+.menu--footer {
+    
+    }
+ 
+    
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    margin-right: 40px;
 }
