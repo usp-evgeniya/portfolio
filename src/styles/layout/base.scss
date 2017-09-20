@@ -56,7 +56,11 @@ button, input {
 
 }
 
-
+p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+    
 
 p span {
     @include roboto(500);

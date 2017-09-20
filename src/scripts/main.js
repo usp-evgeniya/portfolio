@@ -3,7 +3,7 @@ var $ = require('jquery');
 $(document).ready(function () {
     
     $(function(){
-        var mainIntro = $('.main__intro');
+        var mainIntro = $('.main--intro');
         $('.intro__btn-auth').on('click',function (e) {
             e.preventDefault();
             mainIntro.addClass('active');

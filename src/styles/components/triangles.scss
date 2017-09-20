@@ -1,0 +1,19 @@
+
+.triangles {
+    width: 100%;
+    grid-area: hero;
+    z-index: 50;
+    bottom: 0;
+    align-self: end;
+}
+
+.triangles--about {
+
+    .triangle__left {
+        fill: #efeee9;
+    }
+
+    .triangle__right {
+        fill: #eeebdf;
+    }
+}

@@ -35,13 +35,19 @@ block variables
 block content
     .wrapper
         include ../common/header.pug
-        main.main.main__blog
+        main.main.main--blog
             section.section.hero
                 .container
-                    .hero__title
-                        h1 Блог
-                    .subtitle
-                        p Статьи, которые я написала
+                    .hero__content
+                        svg.hero__bg-title.hero__bg-title--blog
+                            use(xlink:href="img/icons/symbol/sprite.svg#blog_header")
+                        .hero__owner.owner
+                            .owner__photo
+                                img(src="img/content/My_image.jpg").owner__img
+                        .title.hero__title
+                            h1 Блог
+                        .hero__description
+                            p Статьи, которые я написала
             .container
                 nav.blog-menu
                     ul.blog-menu__list

@@ -1,0 +1,17 @@
+.skill {
+    display: flex;
+    width: 110px;
+    height: 110px;
+    position: relative;
+}
+
+.skill__title {
+    position: absolute;
+    color: $marine;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include roboto(500);
+    font-size: 13px;
+    text-align: center;
+}

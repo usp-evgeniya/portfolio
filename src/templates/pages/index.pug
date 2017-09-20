@@ -5,7 +5,7 @@ block variables
 
 
 block content
-    main.main.main__intro
+    main.main.main--intro
         section.intro
             button(type="button").intro__btn-auth Авторизоваться
             .intro__welcome
@@ -15,9 +15,9 @@ block content
                             img(src="img/content/My_image.jpg").owner__img
                         h2.owner__title Евгения Морозова
                         span.owner__description Личный сайт веб-разработчика
-                    .socials.intro__socials
+                    .socials.socials--intro
                         include ../common/socials.pug
-                nav.menu.intro__menu
+                nav.menu.menu--intro
                     - 
                         var menuItems = [
                             {

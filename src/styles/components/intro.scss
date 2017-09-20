@@ -26,29 +26,7 @@
     width: 100%;
 }
 
-.intro__menu {
 
-    & .menu__item {
-        border-right: 2px solid #73cac2;
-        
-        &:last-child {
-            border-right: 0 solid transparent;
-            
-        }
-
-    
-    }
-
-    & .menu__link {
-        @extend %btn;
-        border-radius: 0;
-        opacity: 0.85;
-        border: 0px solid transparent;
-    }
-}
-.menu {
-    display: flex;
-}
 
 
 .intro__btn-auth {
