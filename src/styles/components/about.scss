@@ -16,11 +16,16 @@
     width: 443px;
     height: 391px;
     overflow: hidden;
-      
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about__img {
     max-width: 100%;
+    
+
 }
 
 .about__details{
@@ -29,5 +34,8 @@
     align-items: center;
 }
 
+.about__text {
+    margin-bottom: 20px;
+}
 
   

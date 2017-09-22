@@ -3,6 +3,11 @@
     width: 110px;
     height: 110px;
     position: relative;
+    margin-right: 35px;
+
+    &:last-child {
+        margin: 0;
+    }
 }
 
 .skill__title {

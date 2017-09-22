@@ -21,6 +21,28 @@ $(document).ready(function () {
             e.preventDefault();
             hamburger.toggleClass('active');
         });
+    });
+
+    $(function(){
+        $('.circle').on('mouseover',function (e) {
+            e.preventDefault();
+            var elem = $(e.target),
+            circleColored = elem.find('.circle__second'),
+            percent = circleColored.attr('data-circle');
+            strokeDasharray = 2 * Math.PI * 45 * percent / 100;
+            circleColored.css('stroke-dasharray', strokeDasharray + ' 282.6');
+        });
 
     });
+
 });
+
+
+var map;
+window.initMap = function() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+  

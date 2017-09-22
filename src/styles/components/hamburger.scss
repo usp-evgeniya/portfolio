@@ -68,5 +68,5 @@
 .hamburger__link {
     color: $white;
     text-decoration: none;
-    @include title-decor($white);
+    @include title-decor($white,34px);
 }

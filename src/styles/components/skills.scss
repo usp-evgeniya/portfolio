@@ -1,6 +1,8 @@
 .skills {
     grid-area: skills;
     background-color: #eeebdf;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -12,4 +14,31 @@
 
 .skills__details {
     display: flex;
+}
+
+.skills__content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+
+.skills__text {
+    margin-bottom: 20px;
+}
+
+.skills__group {
+    margin-bottom: 40px;
+    
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.skills__group-title {
+    @include roboto(500);
+    font-size: 28px;
+    margin-bottom: 10px;
 }

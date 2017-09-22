@@ -159,8 +159,8 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container">
-          <div class="footer__row">
+        <div class="footer__row">
+          <div class="container">
             <nav class="menu menu--footer">
               <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="/works.html">Мои работы</a></li>
@@ -172,29 +172,45 @@
             <div class="socials socials--footer">
               <ul class="socials__list">
                 <li class="socials__item"><a class="socials__link--vk socials__link" href="#">
-                    <svg class="socials__icon"> 
-                      <use xlink:href="img/icons/symbol/sprite.svg#vk"></use>
+                    <div class="socials__icon-wrapper">
+                      <svg class="socials__icon socials__icon--flat">
+                        <use xlink:href="img/icons/symbol/sprite.svg#vk"></use>
+                      </svg>
+                    </div>
+                    <svg class="socials__icon socials__icon--round">
+                      <use xlink:href="img/icons/symbol/sprite.svg#vk_round"></use>
                     </svg></a></li>
                 <li class="socials__item"><a class="socials__link--gh socials__link" href="#">
-                    <svg class="socials__icon"> 
-                      <use xlink:href="img/icons/symbol/sprite.svg#github"></use>
+                    <div class="socials__icon-wrapper">
+                      <svg class="socials__icon socials__icon--flat">
+                        <use xlink:href="img/icons/symbol/sprite.svg#github"></use>
+                      </svg>
+                    </div>
+                    <svg class="socials__icon socials__icon--round">
+                      <use xlink:href="img/icons/symbol/sprite.svg#github_round"></use>
                     </svg></a></li>
                 <li class="socials__item"><a class="socials__link--in socials__link" href="#">
-                    <svg class="socials__icon"> 
-                      <use xlink:href="img/icons/symbol/sprite.svg#in"></use>
+                    <div class="socials__icon-wrapper">
+                      <svg class="socials__icon socials__icon--flat">
+                        <use xlink:href="img/icons/symbol/sprite.svg#in"></use>
+                      </svg>
+                    </div>
+                    <svg class="socials__icon socials__icon--round">
+                      <use xlink:href="img/icons/symbol/sprite.svg#in_round"></use>
                     </svg></a></li>
               </ul>
             </div>
           </div>
-          <div class="footer__row">
-            <div class="footer__info">
-              <div class="footer__info-text">Я веб-разработчик из Москвы. Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
-            </div>
+        </div>
+        <div class="footer__row">
+          <div class="container">
+            <div class="footer__info-text">Я веб-разработчик из Москвы. Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
             <div class="footer__copyright copyright">&#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017</div>
           </div>
         </div>
       </footer>
     </div>
     <script src="js/main.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&amp;callback=initMap" async defer></script>
   </body>
 </html>

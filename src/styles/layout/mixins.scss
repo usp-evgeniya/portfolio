@@ -86,7 +86,7 @@
     }
 }
 
-@mixin title-decor($color) {
+@mixin title-decor($color,$margintop) {
     
     &:before {
         content: "";
@@ -96,6 +96,7 @@
         opacity: 0.2;
         width: 22px;
         height: 5px;
+        margin-top: ($margintop);
     }
 
     &:after {
@@ -106,6 +107,7 @@
         opacity: 0.2;
         width: 22px;
         height: 5px;
+        margin-top: ($margintop);
     }
 }
 
