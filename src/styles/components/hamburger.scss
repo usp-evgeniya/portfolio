@@ -59,6 +59,7 @@
 }
 
 .hamburger__item {
+    margin-bottom: 50px;
 
     &:last-child {
         margin-bottom: 0;
@@ -68,5 +69,6 @@
 .hamburger__link {
     color: $white;
     text-decoration: none;
-    @include title-decor($white,34px);
+    @include title-decor($white,40px);
+
 }

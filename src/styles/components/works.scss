@@ -1,0 +1,129 @@
+.works {
+    grid-area: works;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 188px 100%;
+    grid-template-areas: 
+    "title"
+    "works"
+}
+
+
+.works__item {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 67% 33%;
+    grid-template-areas: 
+    "description preview"
+    "description btns";
+    display: none;
+}
+
+.works__item.active {
+    display: grid;
+
+}
+
+.works__block {
+    grid-area: description;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0efe9;
+}
+
+.works__description {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.works__example {
+    grid-area: preview;
+}
+
+.works__btns  {
+    grid-area: btns;
+    display: flex;
+    width: 100%;
+}
+
+.works__techs {
+    padding: 15px 0px;
+    border-top: 1px solid rgba(0,150,136,0.3);
+    border-bottom: 1px solid rgba(0,150,136,0.3);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    @include roboto(500);
+    color: $marine;
+}
+
+.works__link {
+    @extend %btn;
+    display: flex;
+    align-items: center;
+    padding: 13px 20px;
+}
+
+.works__link-icon {
+    width: 20px;
+    height: 19px;
+    fill: $white;
+    margin-right: 10px;
+}
+
+.works__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efebe0;
+    height: 530px;
+}
+
+.works__img {
+    width: 80%;
+
+    &--btn {
+        z-index: -100;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.works__btn {
+    width: 50%;
+    height: 225px;
+    border: 1px solid transparent;
+    outline: none;
+    position: relative;
+
+    &--next {
+        background-color: rgba(182,180,174,0.7);
+
+    }
+
+    &--prev {
+        background-color: rgba(136,131,114,0.5);
+
+    }
+
+}
+
+.works__btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 43px;
+    height: 27px;
+    fill: $white;
+    z-index: 100;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.16);
+    
+}

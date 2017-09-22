@@ -26,6 +26,10 @@
     &--home {
         border-right: 2px solid #73cac2;
     }
+
+    &--submit {
+        border-right: 2px solid #73cac2;
+    }
 }
 
 
@@ -114,6 +118,10 @@
     background-color: $white;
     outline: none;
 
+    &--textarea {
+        height: 140px;
+    }
+
     &:focus {
         border: 1px solid $marine;
 
@@ -136,6 +144,13 @@
 
     &--auth {
         border-radius: 0px 5px 5px 0px;
+    }
+}
+
+.contact-form {
+    & .form__input {
+        margin-bottom: 20px;
+        width: 340px;
     }
 }
 

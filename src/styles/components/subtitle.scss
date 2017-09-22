@@ -1,0 +1,46 @@
+.subtitle {
+    @include bernier;
+    font-size: 35px;
+    color: $grey;
+    @include title-decor($black,20px);
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    text-align: center;
+    line-height: 41px;
+
+    &--about {
+        margin-bottom: 30px;
+    }
+    &--skills {
+        margin-top: 12px;
+        margin-bottom: 30px;
+        width: 320px;
+        align-self: center;
+    }
+
+    &--contacts {
+        margin-bottom: 35px;
+    }
+
+    &--articles {
+        margin-bottom: 25px;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+
+    &--works {
+        margin-bottom: 25px;
+    }
+
+    &--contactform {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        display: flex;
+    }
+
+}

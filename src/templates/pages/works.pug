@@ -5,34 +5,37 @@ block variables
         - 
             var worksList = [
                 {
-                subtitle: "Сайт школы онлайн образования", 
-                techs: "HTML5, CSS3, JavaScript & jQuery",
-                link: "#",
-                img: "#"
+                subtitle: "Лендинг для магазина бургеров Mr.Burger", 
+                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp",
+                link: "https://usp-evgeniya.github.io/burgers/",
+                img: "img/content/works/work1.png",
+                active: "active",
                 },
                 {
-                subtitle: "Сайт школы онлайн образования", 
+                subtitle: "Интернет-магазин лабораторного оборудования и приборов", 
                 techs: "HTML5, CSS3, JavaScript & jQuery",
                 link: "#",
-                img: "#"
+                img: "img/content/works/work2.png",
+                active: "",
                 },
                 {
-                subtitle: "Сайт школы онлайн образования", 
+                subtitle: "Лендинг для студии красоты Пион", 
                 techs: "HTML5, CSS3, JavaScript & jQuery",
                 link: "#",
-                img: "#"
+                img: "img/content/works/work3.png",
+                active: "",
                 }
             ]
         - 
             var commentsList = [
                 {
-                comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.", 
+                comment: "Прохождение обучения веб-разработке в LoftSchool — это не просто так! 2 месяца только самых тяжелых испытаний и бессонных ночей!", 
                 person: "Ковальчук Дмитрий",
                 occupation: "Основатель школы",
                 img: "#"
                 },
                 {
-                comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.", 
+                comment: "Женя прошла все три курса Профессии в моей группе, продуктивно поработала и получила отличные знания и навыки.", 
                 person: "Болотова Ольга",
                 occupation: "Наставник группы",
                 img: "#"
@@ -44,51 +47,63 @@ block content
         include ../common/header.pug
         main.main.main--works
             include ../common/hero.pug
+            svg.triangles.triangles--works(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 105" preserveaspectratio="none")
+                polygon.triangle__left(points="0,0 0,105 600,105")
+                polygon.triangle__right(points="1200,0 1200,105 600,105")
             section.section.works
-                .works__triangles
-                    .works__triangle.triangle
-                        svg.triangle__img.triangle__img--left
-                    .works__triangle.triangle
-                        svg.triangle__img.triangle__img--right
-                .works__titles
-                    h1.works__title Мои работы
-                    .works__title-en works
+                .title__wrapper.title__wrapper--works
+                    h1.title.title--works Мои работы
+                    svg.title__bg.title__bg--works
+                        use(xlink:href="img/icons/symbol/sprite.svg#works_header")
                 ul.works__list
                     each item in worksList
-                        .works__block.works__description
-                            h2.works__subtitle.subtitle #{item.subtitle}
-                            .works__techs #{item.techs}
-                            .a(href=`${item.link}`).works__link
-                        .works__block.works__example
-                            .works__photo
-                                img(src=`${item.img}`).works__img
-                            button(type="button").button__next
-                                img(src=`${item.img}`).works__img
-                            button(type="button").button__prev
-                                img(src=`${item.img}`).works__img
+                        li.works__item(class=`${item.active}`)
+                            .works__block
+                                .works__description
+                                    h2.subtitle.subtitle--works #{item.subtitle}
+                                    .works__techs #{item.techs}
+                                    .a(href=`${item.link}`).works__link
+                                        svg.works__link-icon
+                                            use(xlink:href="img/icons/symbol/sprite.svg#link")
+                                        .works__link-text Посмотреть сайт
+                            .works__block.works__example
+                                .works__photo
+                                    img(src=`${item.img}`).works__img
+                            .works__btns        
+                                button(type="button").works__btn.works__btn--next
+                                    img(src=`${item.img}`).works__img.works__img--btn
+                                    svg.works__btn-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
+                                button(type="button").works__btn.works__btn--prev
+                                    img(src=`${item.img}`).works__img.works__img--btn
+                                    svg.works__btn-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
             section.comments
-                .container
-                    .comments__titles
-                        h1.comments__title Что обо мне говорят
-                        .comments__title about
-                    ul.comments__list
-                        each item in commentsList
-                            li.comments__item  
-                                .comments__text
-                                    p #{item.comment}
-                                .comments__photo
-                                    img(src=`${item.img}`).comments__img
-                                .comments__person.comments__person--name #{item.person}
-                                .comments__person.comments__person--occupation #{item.occupation}
-            section.contact-form
-                .container
-                    .contact-form__subtitle.subtitle Связаться со мной
+                .title__wrapper.title__wrapper--comments
+                    h1.title.title--comments Что обо мне говорят
+                    svg.title__bg.title__bg--comments
+                        use(xlink:href="img/icons/symbol/sprite.svg#about_header")
+                ul.comments__list
+                    each item in commentsList
+                        li.comments__item  
+                            .comments__text
+                                p #{item.comment}
+                            .comments__photo
+                                img(src=`${item.img}`).comments__img
+                            .comments__person
+                                .comments__person--name #{item.person}
+                                .comments__person--occupation #{item.occupation}
+                .contact-form
+                    .subtitle.subtitle--contactform Связаться со мной
                     form(action="server.php" method="post").form#form
                         input.form__input(type="text" placeholder="Имя" name="name" required)
                         input.form__input(type="text" placeholder="Email" name="email")
                         textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
                         .form__buttons
-                            button.form__button.form__button--submit(type="submit" name="submit")
-                            button.form__button.form__button--reset(type="reset" name="reset")
-                    button.arrow-up
+                            button.form__button.form__button--submit(type="submit" name="submit") Отправить
+                            button.form__button.form__button--reset(type="reset" name="reset") Очистить
+                button.comments__btn-arrow(type="button")
+                    svg.comments__arrow-up
+                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
+
         include ../common/footer.pug

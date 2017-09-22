@@ -53,109 +53,168 @@
       </header>
       <main class="main main--works">
         <section class="section hero">
-          <div class="container">
-            <div class="hero__content">
-              <svg class="hero__bg-title">
-                <use xlink:href="img/icons/symbol/sprite.svg#portfolio_header"></use>
-              </svg>
-              <div class="hero__owner owner">
-                <div class="owner__photo"><img class="owner__img" src="img/content/My_image.jpg"></div>
-                <div class="owner__title">Евгения Морозова</div><span class="owner__description">Личный сайт веб-разработчика</span>
-              </div>
-              <button class="hero__arrow-btn" type="button">
-                <svg class="hero__arrow-down">
-                  <use xlink:href="img/icons/symbol/sprite.svg#arrow_down"></use>
-                </svg>
-              </button>
+          <svg class="hero__bg-title">
+            <use xlink:href="img/icons/symbol/sprite.svg#portfolio_header"></use>
+          </svg>
+          <div class="hero__content">
+            <div class="hero__owner owner">
+              <div class="owner__photo"><img class="owner__img" src="img/content/My_image.jpg"></div>
+              <div class="owner__title">Евгения Морозова</div><span class="owner__description">Личный сайт веб-разработчика</span>
             </div>
           </div>
+          <button class="hero__arrow-btn" type="button">
+            <svg class="hero__arrow-down">
+              <use xlink:href="img/icons/symbol/sprite.svg#arrow_down"></use>
+            </svg>
+          </button>
         </section>
+        <svg class="triangles triangles--works" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 105" preserveaspectratio="none">
+          <polygon class="triangle__left" points="0,0 0,105 600,105"></polygon>
+          <polygon class="triangle__right" points="1200,0 1200,105 600,105"></polygon>
+        </svg>
         <section class="section works">
-          <div class="works__triangles">
-            <div class="works__triangle triangle">
-              <svg class="triangle__img triangle__img--left"></svg>
-            </div>
-            <div class="works__triangle triangle">
-              <svg class="triangle__img triangle__img--right"></svg>
-            </div>
-          </div>
-          <div class="works__titles">
-            <h1 class="works__title">Мои работы</h1>
-            <div class="works__title-en">works</div>
+          <div class="title__wrapper title__wrapper--works">
+            <h1 class="title title--works">Мои работы</h1>
+            <svg class="title__bg title__bg--works">
+              <use xlink:href="img/icons/symbol/sprite.svg#works_header"></use>
+            </svg>
           </div>
           <ul class="works__list">
-            <div class="works__block works__description">
-              <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
-              <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
-              <div class="a works__link" href="#"></div>
-            </div>
-            <div class="works__block works__example">
-              <div class="works__photo"><img class="works__img" src="#"></div>
-              <button class="button__next" type="button"><img class="works__img" src="#"></button>
-              <button class="button__prev" type="button"><img class="works__img" src="#"></button>
-            </div>
-            <div class="works__block works__description">
-              <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
-              <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
-              <div class="a works__link" href="#"></div>
-            </div>
-            <div class="works__block works__example">
-              <div class="works__photo"><img class="works__img" src="#"></div>
-              <button class="button__next" type="button"><img class="works__img" src="#"></button>
-              <button class="button__prev" type="button"><img class="works__img" src="#"></button>
-            </div>
-            <div class="works__block works__description">
-              <h2 class="works__subtitle subtitle">Сайт школы онлайн образования</h2>
-              <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
-              <div class="a works__link" href="#"></div>
-            </div>
-            <div class="works__block works__example">
-              <div class="works__photo"><img class="works__img" src="#"></div>
-              <button class="button__next" type="button"><img class="works__img" src="#"></button>
-              <button class="button__prev" type="button"><img class="works__img" src="#"></button>
-            </div>
+            <li class="works__item active">
+              <div class="works__block">
+                <div class="works__description">
+                  <h2 class="subtitle subtitle--works">Лендинг для магазина бургеров Mr.Burger</h2>
+                  <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery, Ajax, Gulp</div>
+                  <div class="a works__link" href="https://usp-evgeniya.github.io/burgers/">
+                    <svg class="works__link-icon">
+                      <use xlink:href="img/icons/symbol/sprite.svg#link"></use>
+                    </svg>
+                    <div class="works__link-text">Посмотреть сайт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="works__block works__example">
+                <div class="works__photo"><img class="works__img" src="img/content/works/work1.png"></div>
+              </div>
+              <div class="works__btns">       
+                <button class="works__btn works__btn--next" type="button"><img class="works__img works__img--btn" src="img/content/works/work1.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down"></use>
+                  </svg>
+                </button>
+                <button class="works__btn works__btn--prev" type="button"><img class="works__img works__img--btn" src="img/content/works/work1.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="works__item">
+              <div class="works__block">
+                <div class="works__description">
+                  <h2 class="subtitle subtitle--works">Интернет-магазин лабораторного оборудования и приборов</h2>
+                  <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
+                  <div class="a works__link" href="#">
+                    <svg class="works__link-icon">
+                      <use xlink:href="img/icons/symbol/sprite.svg#link"></use>
+                    </svg>
+                    <div class="works__link-text">Посмотреть сайт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="works__block works__example">
+                <div class="works__photo"><img class="works__img" src="img/content/works/work2.png"></div>
+              </div>
+              <div class="works__btns">       
+                <button class="works__btn works__btn--next" type="button"><img class="works__img works__img--btn" src="img/content/works/work2.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down"></use>
+                  </svg>
+                </button>
+                <button class="works__btn works__btn--prev" type="button"><img class="works__img works__img--btn" src="img/content/works/work2.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="works__item">
+              <div class="works__block">
+                <div class="works__description">
+                  <h2 class="subtitle subtitle--works">Лендинг для студии красоты Пион</h2>
+                  <div class="works__techs">HTML5, CSS3, JavaScript &amp; jQuery</div>
+                  <div class="a works__link" href="#">
+                    <svg class="works__link-icon">
+                      <use xlink:href="img/icons/symbol/sprite.svg#link"></use>
+                    </svg>
+                    <div class="works__link-text">Посмотреть сайт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="works__block works__example">
+                <div class="works__photo"><img class="works__img" src="img/content/works/work3.png"></div>
+              </div>
+              <div class="works__btns">       
+                <button class="works__btn works__btn--next" type="button"><img class="works__img works__img--btn" src="img/content/works/work3.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down"></use>
+                  </svg>
+                </button>
+                <button class="works__btn works__btn--prev" type="button"><img class="works__img works__img--btn" src="img/content/works/work3.png">
+                  <svg class="works__btn-icon">
+                    <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
           </ul>
         </section>
         <section class="comments">
-          <div class="container">
-            <div class="comments__titles">
-              <h1 class="comments__title">Что обо мне говорят</h1>
-              <div class="comments__title">about</div>
-            </div>
-            <ul class="comments__list">
-              <li class="comments__item"> 
-                <div class="comments__text">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.</p>
-                </div>
-                <div class="comments__photo"><img class="comments__img" src="#"></div>
-                <div class="comments__person comments__person--name">Ковальчук Дмитрий</div>
-                <div class="comments__person comments__person--occupation">Основатель школы</div>
-              </li>
-              <li class="comments__item"> 
-                <div class="comments__text">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam mollitia eum quaerat.</p>
-                </div>
-                <div class="comments__photo"><img class="comments__img" src="#"></div>
-                <div class="comments__person comments__person--name">Болотова Ольга</div>
-                <div class="comments__person comments__person--occupation">Наставник группы</div>
-              </li>
-            </ul>
+          <div class="title__wrapper title__wrapper--comments">
+            <h1 class="title title--comments">Что обо мне говорят</h1>
+            <svg class="title__bg title__bg--comments">
+              <use xlink:href="img/icons/symbol/sprite.svg#about_header"></use>
+            </svg>
           </div>
-        </section>
-        <section class="contact-form">
-          <div class="container">
-            <div class="contact-form__subtitle subtitle">Связаться со мной</div>
+          <ul class="comments__list">
+            <li class="comments__item"> 
+              <div class="comments__text">
+                <p>Прохождение обучения веб-разработке в LoftSchool — это не просто так! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              </div>
+              <div class="comments__photo"><img class="comments__img" src="#"></div>
+              <div class="comments__person">
+                <div class="comments__person--name">Ковальчук Дмитрий</div>
+                <div class="comments__person--occupation">Основатель школы</div>
+              </div>
+            </li>
+            <li class="comments__item"> 
+              <div class="comments__text">
+                <p>Женя прошла все три курса Профессии в моей группе, продуктивно поработала и получила отличные знания и навыки.</p>
+              </div>
+              <div class="comments__photo"><img class="comments__img" src="#"></div>
+              <div class="comments__person">
+                <div class="comments__person--name">Болотова Ольга</div>
+                <div class="comments__person--occupation">Наставник группы</div>
+              </div>
+            </li>
+          </ul>
+          <div class="contact-form">
+            <div class="subtitle subtitle--contactform">Связаться со мной</div>
             <form class="form" action="server.php" method="post" id="form">
               <input class="form__input" type="text" placeholder="Имя" name="name" required>
               <input class="form__input" type="text" placeholder="Email" name="email">
               <textarea class="form__input form__input--textarea" type="text" placeholder="Ваше сообщение" name="message"></textarea>
               <div class="form__buttons">
-                <button class="form__button form__button--submit" type="submit" name="submit"></button>
-                <button class="form__button form__button--reset" type="reset" name="reset"></button>
+                <button class="form__button form__button--submit" type="submit" name="submit">Отправить</button>
+                <button class="form__button form__button--reset" type="reset" name="reset">Очистить</button>
               </div>
             </form>
-            <button class="arrow-up"></button>
           </div>
+          <button class="comments__btn-arrow" type="button">
+            <svg class="comments__arrow-up">
+              <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up"></use>
+            </svg>
+          </button>
         </section>
       </main>
       <footer class="footer">

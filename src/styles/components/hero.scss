@@ -9,7 +9,18 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    height: 90vh;
+    height: 100%;
+
+    &--blog {
+        grid-area: heroBlog;
+    }
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .hero__bg-title {

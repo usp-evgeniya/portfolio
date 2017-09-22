@@ -17,3 +17,27 @@
         fill: #eeebdf;
     }
 }
+
+.triangles--blog {
+    grid-area: heroBlog;
+    
+    .triangle__left {
+        fill: $white;
+    }
+
+    .triangle__right {
+        fill: $white;
+    }
+}
+
+.triangles--works {
+    grid-area: hero;
+    
+    .triangle__left {
+        fill: #faf8f0;
+    }
+
+    .triangle__right {
+        fill: #faf8f0;
+    }
+}
