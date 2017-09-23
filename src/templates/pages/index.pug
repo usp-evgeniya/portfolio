@@ -6,71 +6,72 @@ block variables
 
 block content
     main.main.main--intro
-        section.intro
-            button(type="button").intro__btn-auth Авторизоваться
-            .intro__welcome
-                .intro__group
-                    .intro__owner.owner
-                        .owner__photo
-                            img(src="img/content/My_image.jpg").owner__img
-                        h2.owner__title Евгения Морозова
-                        span.owner__description Личный сайт веб-разработчика
-                    .socials.socials--intro
-                        include ../common/socials.pug
-                nav.menu.menu--intro
-                    - 
-                        var menuItems = [
-                            {
-                            title: "Мои работы", 
-                            link: "./works.html"
-                            },
-                            {
-                            title: "Обо мне", 
-                            link: "./about.html"
-                            },
-                            {
-                            title: "Блог", 
-                            link: "./blog.html"
-                            }
-                        ]
+        .main__flipper
+            section.intro
+                .intro__welcome
+                    .intro__group
+                        .intro__owner.owner
+                            .owner__photo
+                                img(src="img/content/My_image.jpg").owner__img
+                            h2.owner__title Евгения Морозова
+                            span.owner__description Личный сайт веб-разработчика
+                        .socials.socials--intro
+                            include ../common/socials.pug
+                    nav.menu.menu--intro
+                        - 
+                            var menuItems = [
+                                {
+                                title: "Мои работы", 
+                                link: "./works.html"
+                                },
+                                {
+                                title: "Обо мне", 
+                                link: "./about.html"
+                                },
+                                {
+                                title: "Блог", 
+                                link: "./blog.html"
+                                }
+                            ]
 
-                    ul.menu
-                        each item in menuItems
-                            li.menu__item
-                                a(href=`${item.link}`).menu__link #{item.title}
-        section.auth
-            .auth-form
-                form(action="server.php" method="post").form#form
-                    .form__inputs
-                        .form__subtitle.subtitle Авторизуйтесь
-                        label.form__label
-                            input.form__input.form__input--auth(type="text" placeholder="Логин" name="login" required)
-                            span.form__id
-                                svg.form__icon
-                                    use(xlink:href="img/icons/symbol/sprite.svg#login")
-                        label.form__label
-                            input.form__input.form__input--auth(type="password" placeholder="Пароль" name="password" required)
-                            span.form__id
-                                svg.form__icon
-                                    use(xlink:href="img/icons/symbol/sprite.svg#password")
-                        label.form__label.form__label--checkbox
-                            input.form__checkbox(type="checkbox" name="captcha")
-                            span.form__checkbox-fake
-                                svg.form__checkbox-icon
-                                    use(xlink:href="img/icons/symbol/sprite.svg#check")
-                            span.form__caption.form__caption--checkbox Я человек
-                        .form__radios
-                            .form__caption.form__caption--question Вы точно не робот?
-                            label.form__label.form__label--radio.form__label--radioyes
-                                input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Да" checked)
-                                span.form__radio-fake
-                                span.form__caption.form__caption--radio Да
-                            label.form__label.form__label--radio.form__label--radiosure
-                                input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Не уверен")
-                                span.form__radio-fake
-                                span.form__caption.form__caption--radio Не уверен
-                    .form__buttons
-                        button.form__button.form__button--home(type="button" name="home") На главную
-                        button.form__button.form__button--auth(type="button" name="auth-btn") Войти
+                        ul.menu
+                            each item in menuItems
+                                li.menu__item
+                                    a(href=`${item.link}`).menu__link #{item.title}
+            section.auth
+                .auth-form
+                    form(action="server.php" method="post").form#form
+                        .form__inputs
+                            .form__subtitle.subtitle Авторизуйтесь
+                            label.form__label
+                                input.form__input.form__input--auth(type="text" placeholder="Логин" name="login" required)
+                                span.form__id
+                                    svg.form__icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#login")
+                            label.form__label
+                                input.form__input.form__input--auth(type="password" placeholder="Пароль" name="password" required)
+                                span.form__id
+                                    svg.form__icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#password")
+                            label.form__label.form__label--checkbox
+                                input.form__checkbox(type="checkbox" name="captcha")
+                                span.form__checkbox-fake
+                                    svg.form__checkbox-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#check")
+                                span.form__caption.form__caption--checkbox Я человек
+                            .form__radios
+                                .form__caption.form__caption--question Вы точно не робот?
+                                label.form__label.form__label--radio.form__label--radioyes
+                                    input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Да" checked)
+                                    span.form__radio-fake
+                                    span.form__caption.form__caption--radio Да
+                                label.form__label.form__label--radio.form__label--radiosure
+                                    input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Не уверен")
+                                    span.form__radio-fake
+                                    span.form__caption.form__caption--radio Не уверен
+                        .form__buttons
+                            button.form__button.form__button--home(type="button" name="home") На главную
+                            button.form__button.form__button--auth(type="button" name="auth-btn") Войти
+        button(type="button").intro__btn-auth Авторизоваться
         .copyright.container
             .copyright_text.intro__copyright &#169; Евгения Морозова | Создано с любовью в LoftSchool | 2017
