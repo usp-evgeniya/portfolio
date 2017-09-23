@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('../img/bg/bg_comments.jpg') 50% 100% no-repeat;
+    background: url('../img/bg/bg_comments.jpg') 50% 40% no-repeat;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: space-between;
     width: 67%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .comments__item {
@@ -27,6 +27,13 @@
     "decor decor"
     "comment comment"
     "photo person"
+
+
+}
+
+.comments__quote-icon {
+    opacity: 0.2;
+    grid-area: decor;
 }
 
 .comments__photo {
@@ -36,6 +43,7 @@
     justify-content: center;
     align-items: center;
     grid-area: photo;
+    align-self: center;
 }
 
 .comments__img {
@@ -45,11 +53,16 @@
 
 .comments__text {
     grid-area: comment;
+
+    & p:last-child {
+        margin-bottom: 15px;
+    }
 }
 
 .comments__person {
     color: $marine;
     grid-area: person;
+    align-self: center;
 
     &--name {
         @include roboto(600);
@@ -74,4 +87,10 @@
     opacity: 0.7;
     width: 26px;
     height: 17px;
+    transition: opacity 0.5s;
+    cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
 }

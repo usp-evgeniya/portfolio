@@ -32,13 +32,13 @@ block variables
                 comment: "Прохождение обучения веб-разработке в LoftSchool — это не просто так! 2 месяца только самых тяжелых испытаний и бессонных ночей!", 
                 person: "Ковальчук Дмитрий",
                 occupation: "Основатель школы",
-                img: "#"
+                img: "img/content/dmitry.jpg"
                 },
                 {
                 comment: "Женя прошла все три курса Профессии в моей группе, продуктивно поработала и получила отличные знания и навыки.", 
                 person: "Болотова Ольга",
                 occupation: "Наставник группы",
-                img: "#"
+                img: "img/content/olya.jpg"
                 }
             ]
 
@@ -85,7 +85,8 @@ block content
                         use(xlink:href="img/icons/symbol/sprite.svg#about_header")
                 ul.comments__list
                     each item in commentsList
-                        li.comments__item  
+                        li.comments__item
+                            img(src="img/quote.png").comments__quote-icon
                             .comments__text
                                 p #{item.comment}
                             .comments__photo
@@ -95,7 +96,7 @@ block content
                                 .comments__person--occupation #{item.occupation}
                 .contact-form
                     .subtitle.subtitle--contactform Связаться со мной
-                    form(action="server.php" method="post").form#form
+                    form(action="server.php" method="post").form#form.form--contacts
                         input.form__input(type="text" placeholder="Имя" name="name" required)
                         input.form__input(type="text" placeholder="Email" name="email")
                         textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")

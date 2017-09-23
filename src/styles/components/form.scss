@@ -19,16 +19,19 @@
     @extend %btn;
     width: 50%;
     border-radius: 0;
-    opacity: 0.85;
     border: 0px solid transparent;
-
+    background-color: rgba(0,191,165,0.85);
 
     &--home {
-        border-right: 2px solid #73cac2;
+        border-right: 2px solid rgba(222,227,231,0.5);
     }
 
     &--submit {
-        border-right: 2px solid #73cac2;
+        border-right: 2px solid rgba(222,227,231,0.5);
+    }
+
+    &--reset {
+        background-color: rgba(0,191,165,0.3);
     }
 }
 
@@ -147,11 +150,15 @@
     }
 }
 
-.contact-form {
+.form--contacts {
+    z-index: 50;
+
     & .form__input {
         margin-bottom: 20px;
         width: 340px;
     }
+
+
 }
 
 .form__checkbox-fake {

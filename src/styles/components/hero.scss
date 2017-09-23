@@ -57,6 +57,7 @@
     bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
+    z-index: 80;
 }
 
 .hero__arrow-down {
@@ -64,6 +65,9 @@
     opacity: 0.7;
     width: 26px;
     height: 17px;
-
-
+    transition: opacity 0.5s;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
 }
