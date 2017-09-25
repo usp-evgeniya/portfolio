@@ -35,7 +35,7 @@
 
 
 .main--about {
-    grid-area: main;
+    //grid-area: main;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 90vh 50% 50%;
@@ -47,7 +47,7 @@
 
 
 .main--blog {
-    grid-area: main;
+    //grid-area: main;
     display: grid;
     grid-template-columns: 33% 67%;
     grid-template-rows: 396px 100%;
@@ -58,7 +58,7 @@
 
 
 .main--works {
-    grid-area: main;
+    //grid-area: main;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 603px 45% 55%;

@@ -32,12 +32,12 @@ block variables
             },
             {
             type: "phone", 
-            contact: "+7(916)412-07-02",
+            contact: "+7 (916) 412 07 02",
             svg: "phone"
             },
             {
             type: "address", 
-            contact: "г. Москва, ул. Усиевича, д. 1",
+            contact: "г. Москва, район Аэропорт",
             svg: "map_marker"
             },          
         ]
@@ -82,13 +82,12 @@ block content
                                                 .skill__title #{skill[0]}
             section.section.map
                 .map__img#map
-                .container
-                    .contacts
-                        h2.subtitle.subtitle--contacts Контакты
-                        ul.contacts__list
-                            each item in contactsList
-                                li.contacts__item(class=`contacts__item--${item.type}`) 
-                                    svg.contacts__icon
-                                        use(xlink:href=`img/icons/symbol/sprite.svg#${item.svg}`)
-                                    .contacts__text #{item.contact}
+                .contacts
+                    h2.subtitle.subtitle--contacts Контакты
+                    ul.contacts__list
+                        each item in contactsList
+                            li.contacts__item(class=`contacts__item--${item.type}`) 
+                                svg.contacts__icon
+                                    use(xlink:href=`img/icons/symbol/sprite.svg#${item.svg}`)
+                                .contacts__text #{item.contact}
         include ../common/footer.pug

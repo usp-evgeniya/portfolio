@@ -1,8 +1,10 @@
 .footer {
-    grid-area: footer;
+    //grid-area: footer;
     width: 100%;
     background-color: rgba(55,62,66,0.85);
-    align-self: end;
+    //align-self: end;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer__row {
@@ -25,7 +27,7 @@
     opacity: 0.5;
     @include roboto(300);
     color: $white;
-    width: 40%;
+    width: 45%;
 }
   
 .footer__copyright {
