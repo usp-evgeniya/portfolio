@@ -38,22 +38,30 @@
     //grid-area: main;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 90vh 50% 50%;
+    grid-template-rows: 603px 50% 50%;
     grid-template-areas: 
     "hero"
     "content"
-    "map"
+    "map";
+
+    @include desktop-large {
+        grid-template-rows: 603px 1fr 100vh;
+    }
 }
 
 
 .main--blog {
     //grid-area: main;
     display: grid;
-    grid-template-columns: 33% 67%;
+    grid-template-columns: 34% 66%;
     grid-template-rows: 396px 100%;
     grid-template-areas: 
     "heroBlog heroBlog"
-    "sidebar articles"
+    "sidebar articles";
+
+    @include desktop-large {
+        grid-template-columns: 26.5% 72.5%;
+    }
 }
 
 
@@ -65,5 +73,5 @@
     grid-template-areas: 
     "hero"
     "works"
-    "comments"
+    "comments";
 }

@@ -1,10 +1,11 @@
 .articles {
     grid-area: articles;
     display: flex;
+    padding-bottom: 150px;
 }
 
 .articles__list {
-    margin-top: 70px;
+    margin-top: 62px;
     width: 87.5%;
 }
 
@@ -19,11 +20,15 @@
 }
 
 .articles__date {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: $marine;
     opacity: 0.7;
 }
 
 .articles__text {
     margin-bottom: 67px;
+
+    & p {
+        line-height: 26px;
+    }
 }

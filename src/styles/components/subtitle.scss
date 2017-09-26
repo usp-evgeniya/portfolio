@@ -8,22 +8,30 @@
     margin: 0;
     line-height: 41px;
 
+    @include desktop-large {
+        text-align: center;
+    }
+
     &--about {
         margin-bottom: 30px;
+
+
     }
+
     &--skills {
         margin-top: 12px;
         margin-bottom: 30px;
         width: 320px;
         align-self: center;
+
     }
 
     &--contacts {
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
 
     &--articles {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         &:before {
             display: none;
         }
@@ -33,7 +41,8 @@
     }
 
     &--works {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+        text-align: center;
     }
 
     &--contactform {

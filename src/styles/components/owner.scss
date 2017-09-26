@@ -19,12 +19,18 @@
 
 .owner__title {
     @include roboto(500);
-    font-size: 28px;
+    font-size: 35px;
     margin: 0;
     margin-top: 20px;
     text-align: center;
 
+    &--intro {
+        margin-top: 10px;
+        font-size: 28px;
+    }
 }
+
+
 
 .owner__description {
     opacity: 0.8;

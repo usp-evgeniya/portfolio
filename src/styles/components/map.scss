@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+  @include desktop-large {
+    height: 100%;
+  }
 }
 
 #map {

@@ -28,6 +28,10 @@
     @include roboto(300);
     color: $white;
     width: 45%;
+
+    @include desktop-large {
+        width: 30%;
+    }
 }
   
 .footer__copyright {

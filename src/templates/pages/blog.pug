@@ -38,7 +38,7 @@ block content
         main.main.main--blog
             section.section.hero.hero--blog
                 .container
-                    .hero__content
+                    .hero__content.hero__content--blog
                         .hero__owner.owner
                             .owner__photo
                                 img(src="img/content/My_image.jpg").owner__img
@@ -47,9 +47,9 @@ block content
                                 svg.title__bg.title__bg--blog
                                     use(xlink:href="img/icons/symbol/sprite.svg#blog_header")
                             .hero__description Статьи, которые я написала
-            svg.triangles.triangles--blog(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 105" preserveaspectratio="none")
-                polygon.triangle__left(points="0,0 0,105 600,105")
-                polygon.triangle__right(points="1200,0 1200,105 600,105")
+            svg.triangles.triangles--blog(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 108" preserveaspectratio="none")
+                polygon.triangle__left(points="0,0 0,108 601,108 601,105")
+                polygon.triangle__right(points="1200,0 1200,108 599,108 599,105")
             nav.blog__sidebar
                 ul.blog__list
                     each article in articlesList

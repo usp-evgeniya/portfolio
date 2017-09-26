@@ -32,6 +32,8 @@
 
 .menu--intro {
     width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
     
     & .menu__item {
         border-right: 2px solid #73cac2;
