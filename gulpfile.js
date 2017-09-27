@@ -5,6 +5,8 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
+    postcss = require('gulp-postcss')
+    pxtorem = require('postcss-pxtorem'),
     //scripts
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
@@ -56,6 +58,14 @@ var paths = {
     }
 }
 
+var plugins = [
+    pxtorem({
+        replace: false,
+        propList: ['*'],
+        minPixelValue: 3
+    })
+]
+
 function styles() {
     return gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
@@ -64,6 +74,7 @@ function styles() {
         browsers : ['last 4 versions'],
         cascade : false
     }))
+    .pipe(postcss(plugins))
     .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.styles.dest))

@@ -33,15 +33,22 @@
 
     &--about {
         margin-bottom: 40px;
+
+        @include desktop-large {
+            margin-right: 60px;
+        }
     }
 
     &--blog {
         color: $white;
         @include title-decor($white,40px);
+        line-height: 56px;
+        margin-top: 20px;
+        margin-bottom: 5px;
     }
 
     &--comments {
-        width: 40%;
+        width: 380px;
         margin-top: 65px;
         margin-bottom: 65px;
         line-height: 66px;
