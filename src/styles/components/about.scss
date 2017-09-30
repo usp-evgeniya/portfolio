@@ -27,6 +27,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablets {
+        height: 417px;
+        margin-bottom: 40px;
+    }
 }
 
 .about__img {
@@ -44,10 +49,27 @@
     @include desktop-large {
         margin-top: 20px; 
     }
+
+    @include tablets {
+        width: 472px;
+    }
 }
 
 .about__text {
     margin-bottom: 20px;
+
+    @include tablets {
+        margin-bottom: 30px;
+        
+        
+    }
 }
 
-  
+.about__text p {
+
+    @include tablets {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+}  

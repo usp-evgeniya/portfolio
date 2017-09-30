@@ -15,6 +15,7 @@ const gulp = require('gulp'),
     webpackConfig = require('./webpack.config.js'),
     jshint = require('gulp-jshint'),
     lintConfig = require('./lint.config.js'),
+    babel = require('gulp-babel');
     //templates
     pug = require('gulp-pug'),
     //build
@@ -35,7 +36,7 @@ var paths = {
         dest: 'dist/css/'
     },
     scripts: {
-        src: 'src/scripts/main.js',
+        src: 'src/scripts/**/*.js',
         watch: 'src/scripts/**/*.js',
         dest: 'dist/js/'
     },
@@ -82,8 +83,9 @@ function styles() {
 
 function scripts() {
     return gulp.src(paths.scripts.src)
-    .pipe(jshint(lintConfig))
-    .pipe(jshint.reporter('default'))
+    .pipe(jshint(lintConfig))    
+    .pipe(jshint.reporter('default')) 
+    .pipe(babel({presets: ['env']}))
     .pipe(gulpWebpack(webpackConfig, webpack))
     .pipe(gulp.dest(paths.scripts.dest));
 }

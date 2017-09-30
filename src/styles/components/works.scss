@@ -5,7 +5,11 @@
     grid-template-rows: 188px 1fr;
     grid-template-areas: 
     "title"
-    "worksList"
+    "worksList";
+
+    @include tablets {
+        grid-template-rows: 134px 100vh;
+    }
 }
 
 .works__list {
@@ -20,6 +24,15 @@
     "description preview"
     "description btns";
     display: none;
+
+    @include tablets {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 1.3fr 1fr;
+        grid-template-areas: 
+        "preview"
+        "description"
+        "btns";
+    }
 }
 
 .works__item.active {
@@ -63,6 +76,10 @@
     margin-bottom: 40px;
     @include roboto(500);
     color: $marine;
+
+    @include tablets {
+        margin-bottom: 17px;
+    }
 }
 
 .works__link {
@@ -114,6 +131,10 @@
     &--prev {
         background-color: rgba(136,131,114,0.5);
 
+    }
+
+    @include tablets {
+        height: 215px;
     }
 
 }

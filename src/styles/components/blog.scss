@@ -2,6 +2,10 @@
     grid-area: sidebar;
     display: flex;
     justify-content: flex-end;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .blog__list {

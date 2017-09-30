@@ -57,14 +57,14 @@
 %btn, %btn2 {
     display: inline-block;
     font-family: roboto, Verdana, Arial, sans-serif;
-    font-size: rem(16px);
+    font-size: 16px;
     font-weight: 500;
     font-style: normal;
     text-decoration: none;
     color: $white;
-    padding: rem(10px) rem(30px);
-    line-height: rem(25px);
-    border-radius: rem(5px);
+    padding: 10px 30px;
+    line-height: 25px;
+    border-radius: 5px;
     cursor: pointer;
     border: 1px solid transparent;
     background-color: $marine;
@@ -97,6 +97,7 @@
         width: 22px;
         height: 5px;
         margin-top: ($margintop);
+        transition: all 0.5s;
     }
 
     &:after {
@@ -108,6 +109,7 @@
         width: 22px;
         height: 5px;
         margin-top: ($margintop);
+        transition: all 0.5s;
     }
 }
 

@@ -17,6 +17,11 @@
     
     .menu__item {
         margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+            
+        }
     }
 
     .menu__link:hover {
@@ -34,15 +39,34 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0 0 5px 5px;
+
+    & .menu__list {
+        display: flex;
+        width: 100%
+    }
     
     & .menu__item {
         border-right: 2px solid #73cac2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         &:last-child {
             border-right: 0 solid transparent;
             
         }
 
+        &--about {
+            flex: 1.4;
+        }
+
+        &--blog {
+            flex: 1;
+        }
+
+        &--works {
+            flex: 1.6;
+        }
     
     }
 
@@ -51,6 +75,18 @@
         border-radius: 0;
         border: 0px solid transparent;
         background-color: rgba(0,191,165,0.85);
+        height: 100%;
+        width: 100%;
+        padding: 10px 10px;
+        text-align: center;
+
+        @include tablets {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 }
     

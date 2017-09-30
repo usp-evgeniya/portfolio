@@ -2,11 +2,22 @@
     grid-area: articles;
     display: flex;
     padding-bottom: 150px;
+
+    @include tablets {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 234px;
+    }
 }
 
 .articles__list {
     margin-top: 62px;
     width: 87.5%;
+
+    @include tablets {
+        width: 100%;
+        margin-top: 43px;
+    }
 }
 
 .articles__item {
@@ -17,18 +28,35 @@
         margin: 0;
         border: none;
     }
+
+    @include tablets {
+        margin-bottom: 40px;
+    }
 }
 
 .articles__date {
     margin-bottom: 20px;
     color: $marine;
     opacity: 0.7;
+
+    @include tablets {
+        margin-bottom: 10px;
+    }
 }
 
 .articles__text {
     margin-bottom: 67px;
 
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
     & p {
         line-height: 26px;
+
+        @include tablets {
+            font-size: 14px;
+            line-height: 24px;
+        }
     }
 }

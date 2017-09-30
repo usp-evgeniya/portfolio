@@ -15,6 +15,10 @@
 
     .triangle__right {
         fill: #eeebdf;
+
+        @include tablets {
+            fill: #efeee9;
+        }
     }
 }
 

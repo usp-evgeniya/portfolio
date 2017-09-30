@@ -12,6 +12,12 @@
     padding: 30px 40px;
     background-color: rgba(252,252,252,0.85);
     border-radius: 5px;
+
+    @include tablets {
+        top: 33%;
+        width: 348px;
+        padding: 30px 35px;
+    }
 }
 
 .contacts__list {
@@ -32,8 +38,18 @@
     width: 26px;
     height: 26px;
     margin-right: 10px;
+
+    @include tablets {
+        width: 24px;
+        height: 24px;
+    }
+
 }
 
-.contacts__text {
+.contacts__link {
     @include roboto(500);
+    text-decoration: none;
+    color: $grey;
+    opacity: 0.8;
+
 }

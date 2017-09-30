@@ -25,12 +25,18 @@
     width: 380px;
     height: 405px;
 
+    
+    @include tablets {
+        width: 348px;
+    }
+
 }
 
 .active {
     .main__flipper {
         transform: rotateY(180deg);
     }
+
 }
 
 
@@ -45,7 +51,11 @@
     "map";
 
     @include desktop-large {
-        grid-template-rows: 603px 1fr 100vh;
+        grid-template-rows: 603px 1fr 1074px;
+    }
+
+    @include tablets {
+        grid-template-rows: 506px 100% 885px;
     }
 }
 
@@ -61,6 +71,15 @@
 
     @include desktop-large {
         grid-template-columns: 26.5% 72.5%;
+
+    }
+
+    @include tablets {
+        grid-template-rows: 506px 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "heroBlog"
+        "articles";
     }
 }
 
@@ -74,4 +93,9 @@
     "hero"
     "works"
     "comments";
+
+    @include tablets {
+        grid-template-rows: 506px 100% 100%;
+    }
+
 }

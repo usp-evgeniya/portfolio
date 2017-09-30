@@ -13,6 +13,10 @@
         background-position-y: 65%;
     }
 
+    @include tablets {
+        padding-bottom: 234px;
+    }
+
 }
 
 .comments__list {
@@ -21,24 +25,29 @@
     align-items: space-between;
     width: 67%;
     margin-bottom: 70px;
+    
+    @include tablets {
+        width: 95%;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        
+    }
 }
 
 .comments__item {
     //width: 49%;
     display: grid;
     grid-template-columns: 100px 280px;
-    grid-template-rows: 50px 1fr 1fr;
+    //grid-template-rows: 100% 100%;
     grid-template-areas: 
-    "decor decor"
     "comment comment"
-    "photo person"
+    "photo person";
 
+    @include tablets {
+        grid-template-columns: 100px 248px;
 
-}
+    }
 
-.comments__quote-icon {
-    opacity: 0.2;
-    grid-area: decor;
 }
 
 .comments__photo {
@@ -59,10 +68,38 @@
 .comments__text {
     grid-area: comment;
     line-height: 26px;
+    padding-right: 30px;
 
     & p:last-child {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        
+
+        @include tablets {
+            margin-bottom: 10px;
+        }
     }
+
+    &:before {
+        content: '';
+        display: block;
+        height: 29px;
+        width: 33px;
+        background: url('../img/icons/quote.svg') 50% 50% no-repeat;
+        opacity: 0.2;
+        margin-bottom: 25px;
+
+        @include tablets {
+            margin-bottom: 15px;
+
+        }
+    }
+
+    @include tablets {
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
 }
 
 .comments__person {
@@ -79,6 +116,13 @@
         @include roboto(400);
 
     }
+
+    @include tablets {
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
   
 }
 
@@ -86,6 +130,10 @@
     margin-bottom: 70px;
     border: 1px solid transparent;
     background-color: transparent;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
 }
 
 .comments__arrow-up {

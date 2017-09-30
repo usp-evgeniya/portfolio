@@ -22,23 +22,26 @@ block variables
             {
             type: "skype", 
             contact: "humming-bird7",
-            svg: "skype"
+            svg: "skype",
+            link: "skype:humming-bird7"
             },
             {
             type: "email", 
             contact: "morozovaey@gmail.com",
-            svg: "envelope"
-
+            svg: "envelope",
+            link: "mailto:morozovaey@gmail.com"
             },
             {
             type: "phone", 
             contact: "+7 (916) 412 07 02",
-            svg: "phone"
+            svg: "phone",
+            link: "tel:89164120702"
             },
             {
             type: "address", 
             contact: "г. Москва, район Аэропорт",
-            svg: "map_marker"
+            svg: "map_marker",
+            link: "https://www.google.ru/maps/place/%D0%93%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8F+%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82/@55.800155,37.5321896,15z/data=!4m8!1m2!2m1!1z0JDRjdGA0L7Qv9C-0YDRgg!3m4!1s0x0:0xabe0a8166d18b2fc!8m2!3d55.8017378!4d37.531853"
             },          
         ]
 
@@ -89,5 +92,5 @@ block content
                             li.contacts__item(class=`contacts__item--${item.type}`) 
                                 svg.contacts__icon
                                     use(xlink:href=`img/icons/symbol/sprite.svg#${item.svg}`)
-                                .contacts__text #{item.contact}
+                                a.contacts__link(href=`${item.link}`) #{item.contact}
         include ../common/footer.pug

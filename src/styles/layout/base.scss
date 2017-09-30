@@ -43,6 +43,11 @@ body {
     width: 100%;
     padding: 0 30px;
     margin: 0 auto;
+
+    
+    @include tablets {
+        padding: 0 24px;
+    }
 }
 
 ul {

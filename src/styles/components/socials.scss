@@ -46,6 +46,10 @@
 
     .socials__list {
         margin: 30px;
+
+        @include tablets {
+            margin: 27px 24px;
+        }
     }
 }
 
@@ -53,6 +57,10 @@
 
     .socials__list {
         margin: 0;
+
+        @include tablets {
+            margin-top: 15px;
+        }
     }
 
     .socials__link {

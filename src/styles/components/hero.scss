@@ -24,6 +24,10 @@
 
     &--blog {
         top: 50%;
+
+        @include tablets {
+            top: 46%;
+        }
     }
 }
 
@@ -78,4 +82,8 @@
 
 .hero__description {
     text-align: center;
+
+    @include tablets {
+        font-size: 14px;
+    }
 }

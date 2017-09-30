@@ -99,6 +99,11 @@
     height: 18px;
     fill: #c4cbcd;
 
+    @include tablets {
+        width: 14px;
+        height: 14px;
+    }
+
 }
 
 .form__inputs {
@@ -155,7 +160,8 @@
 
     & .form__input {
         margin-bottom: 20px;
-        width: 340px;
+        width: 89%;
+
     }
 
 
