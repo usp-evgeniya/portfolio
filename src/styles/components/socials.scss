@@ -34,14 +34,19 @@
 .socials--intro {
       
     .socials__icon {
-    fill: $marine;
+        fill: $marine;
     }
 }
 
 .socials--header {
         
     .socials__icon {
-    fill: $white;
+        fill: $white;
+
+        @include phones {
+            width: 25px;
+            height: 18px;
+        }
     }
 
     .socials__list {
@@ -49,6 +54,10 @@
 
         @include tablets {
             margin: 27px 24px;
+        }
+
+        @include phones {
+            margin: 11px;
         }
     }
 }
@@ -61,6 +70,8 @@
         @include tablets {
             margin-top: 15px;
         }
+
+
     }
 
     .socials__link {

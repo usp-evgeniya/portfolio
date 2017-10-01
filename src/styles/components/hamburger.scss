@@ -16,6 +16,12 @@
         right: 24px;
     }
 
+    @include phones {
+        top: 11px;
+        right: 11px;
+        padding: 0;
+    }
+
 }
 
 .hamburger__icon {
@@ -25,6 +31,11 @@
 
     &--close {
         display: none;
+    }
+
+    @include phones {
+        width: 23px;
+        height: 23px;
     }
 }
 
@@ -73,6 +84,10 @@
     @include tablets {
         margin-bottom: 66px;
     }
+
+    @include phones {
+        margin-bottom: 34px;
+    }
 }
 
 .hamburger__link {
@@ -84,6 +99,11 @@
     @include tablets {
         @include title-decor($white,30px);
     }
+
+    @include phones {
+        @include title-decor($white,17px);
+    }
+
 
 
 }

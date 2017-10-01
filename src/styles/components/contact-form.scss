@@ -28,4 +28,10 @@
         margin-bottom: 100px;
 
     }
+
+    @include phones {
+        width: 300px;
+        margin-bottom: 50px;
+
+    }
 }

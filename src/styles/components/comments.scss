@@ -17,6 +17,10 @@
         padding-bottom: 234px;
     }
 
+    @include phones {
+        padding-bottom: 264px;
+    }
+
 }
 
 .comments__list {
@@ -31,6 +35,11 @@
         justify-content: space-between;
         margin-bottom: 50px;
         
+    }
+
+    @include phones {
+        flex-direction: column;
+        margin-bottom: 35px;
     }
 }
 
@@ -48,16 +57,30 @@
 
     }
 
+    @include phones {
+        width: 100%;
+        grid-template-columns: 80px 1fr;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
 }
 
 .comments__photo {
-    @include circle(80px,$marine);
+    @include circle(80px,$white);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: photo;
     align-self: center;
+
+    @include phones {
+        @include circle(55px,$white);
+    }
 }
 
 .comments__img {
@@ -77,6 +100,11 @@
         @include tablets {
             margin-bottom: 10px;
         }
+
+        @include phones {
+            margin-bottom: 5px;
+
+        }
     }
 
     &:before {
@@ -91,6 +119,11 @@
         @include tablets {
             margin-bottom: 15px;
 
+        }
+
+        @include phones {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -133,6 +166,11 @@
 
     @include tablets {
         margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 30px;
+
     }
 }
 

@@ -8,6 +8,13 @@
         padding-right: 24px;
         padding-bottom: 234px;
     }
+
+    
+    @include phones {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-bottom: 264px;
+    }
 }
 
 .articles__list {
@@ -17,6 +24,10 @@
     @include tablets {
         width: 100%;
         margin-top: 43px;
+    }
+
+    @include phones {
+        margin-top: 27px;
     }
 }
 
@@ -32,6 +43,12 @@
     @include tablets {
         margin-bottom: 40px;
     }
+
+    @include phones {
+        margin-bottom: 25px;
+        border-bottom: 4px solid rgba(55,62,66,0.07);
+    }
+
 }
 
 .articles__date {
@@ -49,6 +66,10 @@
 
     @include tablets {
         margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 25px;
     }
 
     & p {

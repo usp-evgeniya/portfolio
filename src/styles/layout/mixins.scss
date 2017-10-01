@@ -74,6 +74,12 @@
     &:hover {
         background-color: $dark-marine;
     }
+
+    @include phones {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 15px;
+    }
 }
 
 %btn2 {

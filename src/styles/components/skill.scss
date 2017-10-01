@@ -5,9 +5,19 @@
     position: relative;
     margin-right: 35px;
 
+    @include phones {
+        margin: 15px;
+    }
+
     &:last-child {
         margin: 0;
+
+        @include phones {
+            margin: 15px;
+        }
     }
+
+
 }
 
 .skill__title {

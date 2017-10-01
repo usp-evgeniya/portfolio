@@ -14,6 +14,11 @@
 
 .skills__details {
     display: flex;
+
+    @include phones {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .skills__content {
@@ -28,6 +33,11 @@
         
     }
 
+    
+    @include phones {
+        width: 95%;
+    }
+
 }
 
 .skills__text {
@@ -36,7 +46,22 @@
     @include tablets {
         margin-bottom: 18px;
     }
+
+    @include phones {
+        margin-bottom: 0px;
+    }
+
+    & p {
+        @include phones {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+        
+    }
+
 }
+
 
 .skills__group {
     margin-bottom: 35px;
@@ -47,6 +72,10 @@
         @include tablets {
             margin-bottom: 50px;
         }
+
+        @include phones {
+            margin-bottom: 10px;
+        }
     }
 
     @include tablets {
@@ -54,6 +83,10 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 42px;
+    }
+
+    @include phones {
+        margin-bottom: 7px;
     }
 }
 
@@ -64,5 +97,9 @@
 
     @include tablets {
         font-size: 21px;
+    }
+
+    @include phones {
+        margin-bottom: 0px;
     }
 }

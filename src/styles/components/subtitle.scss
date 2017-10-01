@@ -14,6 +14,13 @@
 
     @include tablets {
         font-size: 30px;
+        @include title-decor($black,15px);
+    }
+
+    @include phones {
+        font-size: 21px;
+        line-height: 28px;
+        @include title-decor($black,11px);
     }
 
     &--about {
@@ -21,6 +28,10 @@
 
         @include tablets {
             margin-bottom: 5px;
+        }
+
+        @include phones {
+            margin-bottom: 10px;
         }
 
     }
@@ -38,10 +49,22 @@
             
         }
 
+        @include phones {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            width: 70%;
+        }
+
     }
 
     &--contacts {
         margin-bottom: 30px;
+
+        @include phones {
+            font-size: 35px;
+            line-height: 42px;
+            margin-bottom: 12px;
+        }
     }
 
     &--articles {
@@ -55,6 +78,10 @@
 
         @include tablets {
             margin-bottom: 5px;
+        }
+
+        @include phones {
+            margin-bottom: 10px;
         }
     }
 
@@ -75,6 +102,11 @@
 
         @include tablets {
             margin-bottom: 11px;
+        }
+
+        @include phones {
+            margin-bottom: 22px;
+    
         }
     }
 
