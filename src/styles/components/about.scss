@@ -53,14 +53,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 445px;
+    width: 100%;
 
     @include desktop-large {
         margin-top: 20px; 
     }
 
     @include tablets {
-        width: 472px;
+        width: 85%;
     }
 
     @include phones {

@@ -42,6 +42,11 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    &:hover .contacts__link {
+        color: $black;
+        opacity: 1;
+    }
 }
 
 .contacts__icon {
@@ -62,5 +67,6 @@
     text-decoration: none;
     color: $grey;
     opacity: 0.8;
+    transition: all 0.5s;
 
 }

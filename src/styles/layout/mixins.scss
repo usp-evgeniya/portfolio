@@ -29,7 +29,7 @@
 }
 
 @mixin desktop-large {
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop + 1px) {
         @content;
     }
 }

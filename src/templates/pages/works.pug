@@ -55,27 +55,27 @@ block content
                     h1.title.title--works Мои работы
                     svg.title__bg.title__bg--works
                         use(xlink:href="img/icons/symbol/sprite.svg#works_header")
-                ul.works__list
+                ul.works__list.js-slider
                     each item in worksList
                         li.works__item(class=`${item.active}`)
                             .works__block
                                 .works__description
-                                    h2.subtitle.subtitle--works #{item.subtitle}
+                                    h2.subtitle.subtitle--works.js-slide-subtitle #{item.subtitle}
                                     .works__techs #{item.techs}
-                                    .a(href=`${item.link}`).works__link
+                                    .a(href=`${item.link}`).works__link.js-slide-link
                                         svg.works__link-icon
                                             use(xlink:href="img/icons/symbol/sprite.svg#link")
                                         .works__link-text Посмотреть сайт
                             .works__example
                                 .works__photo
-                                    img(src=`${item.img}`).works__img
+                                    img(src=`${item.img}`).works__img.js-slide-img
                             .works__btns        
-                                button(type="button").works__btn.works__btn--next
-                                    img(src=`${item.img}`).works__img.works__img--btn
+                                button(type="button").works__btn.works__btn--next.js-btn-next
+                                    img(src=`${item.img}`).works__img.works__img--btn.js-slide-next
                                     svg.works__btn-icon
                                         use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
-                                button(type="button").works__btn.works__btn--prev
-                                    img(src=`${item.img}`).works__img.works__img--btn
+                                button(type="button").works__btn.works__btn--prev.js-btn-prev
+                                    img(src=`${item.img}`).works__img.works__img--btn.js-slide-prev
                                     svg.works__btn-icon
                                         use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
             section.comments

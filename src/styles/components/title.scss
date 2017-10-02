@@ -1,23 +1,16 @@
 .title__wrapper {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &--works {
         grid-area: title;
-        display: flex;
         width: 100%;
-        justify-content: center;
-        align-items: center;
         background-color: #faf8f0;
 
     }
 
-    &--comments {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-
-    }
 
 }
 
@@ -138,6 +131,10 @@
             top: 10%;
         }
 
+        @include phones {
+            top: 0%;
+        }
+
 
     }
 
@@ -145,6 +142,10 @@
         top: 20%;
         transform: translate(-50%, -20%);
         fill: #6e7171;
+
+        @include phones {
+            top: 0%;
+        }
     }
 
 
