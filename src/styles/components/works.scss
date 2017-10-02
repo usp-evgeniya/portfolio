@@ -2,7 +2,7 @@
     grid-area: works;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 188px 1fr;
+    grid-template-rows: 188px 755px;
     grid-template-areas: 
     "title"
     "worksList";
@@ -27,7 +27,6 @@
     grid-template-areas: 
     "description preview"
     "description btns";
-    display: none;
 
     @include tablets {
         height: 1014px;
@@ -43,11 +42,6 @@
         height: 100vh;
         grid-template-rows: 45% 40% 1fr;
     }
-}
-
-.works__item.active {
-    display: grid;
-
 }
 
 .works__block {
@@ -155,6 +149,7 @@
     border: 1px solid transparent;
     outline: none;
     position: relative;
+    cursor: pointer;
 
     &--next {
         background-color: rgba(182,180,174,0.7);
