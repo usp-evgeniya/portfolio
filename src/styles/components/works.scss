@@ -2,10 +2,18 @@
     grid-area: works;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 188px 1fr;
+    grid-template-rows: 188px 755px;
     grid-template-areas: 
     "title"
-    "worksList"
+    "worksList";
+
+    @include tablets {
+        grid-template-rows: 134px 100%;
+    }
+
+    @include phones {
+        grid-template-rows: 83px 100vh;
+    }
 }
 
 .works__list {
@@ -19,12 +27,21 @@
     grid-template-areas: 
     "description preview"
     "description btns";
-    display: none;
-}
 
-.works__item.active {
-    display: grid;
+    @include tablets {
+        height: 1014px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 25% 1fr;
+        grid-template-areas: 
+        "preview"
+        "description"
+        "btns";
+    }
 
+    @include phones {
+        height: 100vh;
+        grid-template-rows: 45% 40% 1fr;
+    }
 }
 
 .works__block {
@@ -42,10 +59,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include phones {
+        width: 97%;
+    }
 }
 
 .works__example {
     grid-area: preview;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0efe9;
 }
 
 .works__btns  {
@@ -63,6 +89,15 @@
     margin-bottom: 40px;
     @include roboto(500);
     color: $marine;
+
+    @include tablets {
+        margin-bottom: 17px;
+    }
+
+    
+    @include phones {
+        padding: 5px 0px;
+    }
 }
 
 .works__link {
@@ -70,6 +105,11 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+
+    @include phones {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
 }
 
 .works__link-icon {
@@ -85,6 +125,10 @@
     align-items: center;
     background-color: #efebe0;
     height: 530px;
+
+    @include tablets {
+        height: 100%;
+    }
 }
 
 .works__img {
@@ -105,6 +149,7 @@
     border: 1px solid transparent;
     outline: none;
     position: relative;
+    cursor: pointer;
 
     &--next {
         background-color: rgba(182,180,174,0.7);
@@ -114,6 +159,14 @@
     &--prev {
         background-color: rgba(136,131,114,0.5);
 
+    }
+
+    @include tablets {
+        height: 100%;
+    }
+
+    @include phones {
+        height: 100%;
     }
 
 }

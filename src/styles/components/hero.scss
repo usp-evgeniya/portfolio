@@ -22,9 +22,24 @@
     left: 50%;
     transform: translate(-50%,-50%);
 
+    @include phones {
+        width: 100%;
+        top: 40%;
+    }
+
     &--blog {
         top: 50%;
+
+        @include tablets {
+            top: 46%;
+        }
+
+        @include phones {
+            top: 42%;
+        }
     }
+
+
 }
 
 .hero__bg-title {
@@ -62,6 +77,10 @@
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 80;
+
+    @include phones {
+        bottom: 9%;
+    }
 }
 
 .hero__arrow-down {
@@ -74,8 +93,18 @@
     &:hover {
         opacity: 1;
     }
+
+
+
 }
 
 .hero__description {
     text-align: center;
+
+    @include tablets {
+        font-size: 14px;
+    }
 }
+
+
+

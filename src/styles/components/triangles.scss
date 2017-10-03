@@ -5,6 +5,10 @@
     z-index: 50;
     margin-bottom: -2px;
     align-self: end;
+
+    @include tablets {
+        margin-bottom: -1px;
+    }
 }
 
 .triangles--about {
@@ -15,6 +19,10 @@
 
     .triangle__right {
         fill: #eeebdf;
+
+        @include tablets {
+            fill: #efeee9;
+        }
     }
 }
 

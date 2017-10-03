@@ -55,29 +55,28 @@ block content
                     h1.title.title--works Мои работы
                     svg.title__bg.title__bg--works
                         use(xlink:href="img/icons/symbol/sprite.svg#works_header")
-                ul.works__list
-                    each item in worksList
-                        li.works__item(class=`${item.active}`)
-                            .works__block
-                                .works__description
-                                    h2.subtitle.subtitle--works #{item.subtitle}
-                                    .works__techs #{item.techs}
-                                    .a(href=`${item.link}`).works__link
-                                        svg.works__link-icon
-                                            use(xlink:href="img/icons/symbol/sprite.svg#link")
-                                        .works__link-text Посмотреть сайт
-                            .works__block.works__example
-                                .works__photo
-                                    img(src=`${item.img}`).works__img
-                            .works__btns        
-                                button(type="button").works__btn.works__btn--next
-                                    img(src=`${item.img}`).works__img.works__img--btn
-                                    svg.works__btn-icon
-                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
-                                button(type="button").works__btn.works__btn--prev
-                                    img(src=`${item.img}`).works__img.works__img--btn
-                                    svg.works__btn-icon
-                                        use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
+                ul.works__list.js-slider
+                    li.works__item
+                        .works__block
+                            .works__description
+                                h2.subtitle.subtitle--works.js-slide-subtitle
+                                .works__techs.js-slide-techs 
+                                a(href="").works__link.js-slide-link
+                                    svg.works__link-icon
+                                        use(xlink:href="img/icons/symbol/sprite.svg#link")
+                                    .works__link-text Посмотреть сайт
+                        .works__example
+                            .works__photo
+                                img(src="").works__img.js-slide-img
+                        .works__btns        
+                            button(type="button").works__btn.works__btn--next.js-btn-next
+                                img(src="").works__img.works__img--btn.js-slide-next
+                                svg.works__btn-icon
+                                    use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_down")
+                            button(type="button").works__btn.works__btn--prev.js-btn-prev
+                                img(src="").works__img.works__img--btn.js-slide-prev
+                                svg.works__btn-icon
+                                    use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
             section.comments
                 .title__wrapper.title__wrapper--comments
                     h1.title.title--comments Что обо мне говорят
@@ -86,7 +85,6 @@ block content
                 ul.comments__list
                     each item in commentsList
                         li.comments__item
-                            img(src="img/quote.png").comments__quote-icon
                             .comments__text
                                 p #{item.comment}
                             .comments__photo

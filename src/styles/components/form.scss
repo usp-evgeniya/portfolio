@@ -99,6 +99,11 @@
     height: 18px;
     fill: #c4cbcd;
 
+    @include tablets {
+        width: 14px;
+        height: 14px;
+    }
+
 }
 
 .form__inputs {
@@ -120,6 +125,13 @@
     color: $black;
     background-color: $white;
     outline: none;
+
+    @include phones {
+        width: 215px;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 18px;
+    }
 
     &--textarea {
         height: 140px;
@@ -147,6 +159,7 @@
 
     &--auth {
         border-radius: 0px 5px 5px 0px;
+
     }
 }
 
@@ -155,7 +168,12 @@
 
     & .form__input {
         margin-bottom: 20px;
-        width: 340px;
+        width: 89%;
+
+
+        @include phones {
+            width: 87%;
+        }
     }
 
 
@@ -192,6 +210,12 @@
             display: block;
 
         }
+    }
+}
+
+.form__radios {
+    @include phones {
+        margin-bottom: 10px;
     }
 }
 

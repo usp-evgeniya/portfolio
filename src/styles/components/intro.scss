@@ -19,6 +19,7 @@
     justify-content: center;
     border: 0px solid transparent;
     height: 100%;
+    width: 100%;
 
 
 }
@@ -39,9 +40,18 @@
     position: absolute;
     top: 3%;
     right: 2%;
+    transition: all 0.5s;
 
     @include desktop-large {
         right: 5.5%;
+    }
+
+    @include phones {
+        right: default;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 7px 15px;
     }
 }
 
@@ -53,20 +63,21 @@
     transform: translate(-50%, 0%);
     color: $white;
     opacity: 0.7;
+    text-align: center;
+    width: 100%;
+
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include phones {
+        bottom: 2%;
+    }
 }
 
 
 
 .active {
-    /*
-    & .intro {
-        display: none;
-    }
-
-    & .auth {
-        display: flex;
-    }
-    */
 
     .intro__btn-auth {
         display: none;

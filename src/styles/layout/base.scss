@@ -14,6 +14,11 @@ html,body {
 
 html {
     font-size: 16px;
+
+    @include phones-small {
+        font-size: 2.5vh;
+    }
+
 }
 
 body {
@@ -24,6 +29,10 @@ body {
     font-size: 16px;
     color: $grey;
     background-color: #fff;
+
+    @include phones {
+        font-size: 14px;
+    }
 }
 
 .wrapper {
@@ -43,6 +52,11 @@ body {
     width: 100%;
     padding: 0 30px;
     margin: 0 auto;
+
+    
+    @include tablets {
+        padding: 0 24px;
+    }
 }
 
 ul {

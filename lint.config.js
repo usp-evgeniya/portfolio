@@ -5,6 +5,9 @@ const lintConfig = {
     "quotmark": false,
     "browser": true,
     "devel": true,
+    "undef": false,
+    "unused": true,
+    "unused": true,
     "globals": {
       "$": true,
     }
