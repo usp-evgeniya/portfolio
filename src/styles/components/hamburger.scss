@@ -90,6 +90,10 @@
         margin-bottom: 66px;
     }
 
+    @include phones-width {
+        margin-bottom: 10px;
+    }
+
     @include phones {
         margin-bottom: 34px;
     }

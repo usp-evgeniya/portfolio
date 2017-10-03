@@ -41,6 +41,11 @@
     }
 }
 
+@mixin phones-width {
+    @media screen and (max-width: $phones-width) {
+        @content;
+    }
+}
 
 @mixin phones {
     @media screen and (max-width: $phones) {
