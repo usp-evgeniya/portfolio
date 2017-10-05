@@ -4,19 +4,19 @@ module.exports = function() {
         subtitle: "Лендинг для магазина бургеров Mr.Burger", 
         techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp",
         link: "https://usp-evgeniya.github.io/burgers/",
-        img: "../img/content/works/work1.png"
+        img: "img/content/works/work1.png"
         },
         {
         subtitle: "Интернет-магазин лабораторного оборудования и приборов", 
         techs: "HTML5, CSS3, JavaScript & jQuery",
         link: "#",
-        img: "../img/content/works/work2.png"
+        img: "img/content/works/work2.png"
         },
         {
         subtitle: "Лендинг для студии красоты Пион", 
         techs: "HTML5, CSS3, JavaScript & jQuery",
         link: "#",
-        img: "../img/content/works/work3.png"
+        img: "img/content/works/work3.png"
         }
     ];
 
@@ -55,7 +55,6 @@ module.exports = function() {
         prevSlide.setAttribute('src', slides[prev].img);
         nextSlide.setAttribute('src', slides[next].img);
 
-        console.log(showingSlide.setAttribute('src', slides[currentSlide].img))
     }
 
 
