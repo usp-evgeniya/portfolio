@@ -3,8 +3,12 @@ const hamburgerInit = require('./modules/hamburger');
 const welcome = require('./modules/welcome');
 const googleMap = require('./modules/map');
 const skills = require('./modules/skills');
-const sliderInit = require('./modules/slider');
+const fillSlider = require('./modules/slider');
 const transition = require('./modules/transition');
 
-sliderInit();
-transition();
+if (document.getElementsByClassName('js-slider').length > 0) {
+    fillSlider();
+}
+
+
+
