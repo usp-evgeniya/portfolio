@@ -1,0 +1,31 @@
+module.exports = function () {
+    var blur = (function () {
+        var wrapper = document.querySelector('.js-blur-wrapper'),
+            form = document.querySelector('.js-blur-form');
+
+        return {
+            set: function() {
+                var bgWidth = document.querySelector('.js-blur-bg').offsetWidth,
+                    bgHeight = document.querySelector('.js-blur-bg').offsetHeight,
+                    posTop = -wrapper.offsetTop,
+                    blurCSS = form.style,
+                    wrapperHeight = wrapper.offsetHeight;
+                    transformY = posTop-wrapperHeight/2;
+                blurCSS.height = bgHeight + 'px';
+                blurCSS.width = bgWidth + 'px';
+                blurCSS.transform = 'translate(-50%,' + transformY + 'px)';
+
+
+                console.log(bgWidth, bgHeight, posTop, wrapperHeight, transformY);
+            }
+        }
+    })();
+
+    blur.set();
+
+    window.onresize = function () {
+        blur.set();
+    }
+
+    //https://www.youtube.com/watch?v=LJ5NDW7AxtE
+};

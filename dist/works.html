@@ -110,7 +110,7 @@
             </li>
           </ul>
         </section>
-        <section class="comments">
+        <section class="section comments js-blur-bg">
           <div class="title__wrapper title__wrapper--comments">
             <h1 class="title title--comments">Что обо мне говорят</h1>
             <svg class="title__bg title__bg--comments">
@@ -139,19 +139,22 @@
               </div>
             </li>
           </ul>
-          <div class="contact-form">
-            <div class="subtitle subtitle--contactform">Связаться со мной</div>
-            <form class="form form--contacts" action="server.php" method="post" id="form">
-              <input class="form__input" type="text" placeholder="Имя" name="name" required>
-              <input class="form__input" type="text" placeholder="Email" name="email">
-              <textarea class="form__input form__input--textarea" type="text" placeholder="Ваше сообщение" name="message"></textarea>
-              <div class="form__buttons">
-                <button class="form__button form__button--submit" type="submit" name="submit">Отправить</button>
-                <button class="form__button form__button--reset" type="reset" name="reset">Очистить</button>
-              </div>
-            </form>
+          <div class="contact-form__wrapper js-blur-wrapper">
+            <div class="contact-form__blur js-blur-form"></div>
+            <div class="contact-form">
+              <div class="subtitle subtitle--contactform">Связаться со мной</div>
+              <form class="form form--contacts" action="server.php" method="post" id="form">
+                <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                <input class="form__input" type="text" placeholder="Email" name="email">
+                <textarea class="form__input form__input--textarea" type="text" placeholder="Ваше сообщение" name="message"></textarea>
+                <div class="form__buttons">
+                  <button class="form__button form__button--submit" type="submit" name="submit">Отправить</button>
+                  <button class="form__button form__button--reset" type="reset" name="reset">Очистить</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <button class="comments__btn-arrow" type="button">
+          <button class="comments__btn-arrow js-comments-btn" type="button">
             <svg class="comments__arrow-up">
               <use xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up"></use>
             </svg>
