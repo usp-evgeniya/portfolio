@@ -27,5 +27,4 @@ module.exports = function () {
         blur.set();
     }
 
-    //https://www.youtube.com/watch?v=LJ5NDW7AxtE
 };

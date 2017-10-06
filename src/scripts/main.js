@@ -6,6 +6,7 @@ const skills = require('./modules/skills');
 const fillSlider = require('./modules/slider');
 const transition = require('./modules/transition');
 const blurInit = require('./modules/blur');
+const parallax = require('./modules/parallax');
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
@@ -19,4 +20,7 @@ if (document.getElementsByClassName('js-blur-bg').length > 0) {
     blurInit();
 }
 
+if (document.getElementsByClassName('js-bg-hero').length > 0) {
+    parallax();
+}
 

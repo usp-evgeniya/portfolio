@@ -1,6 +1,5 @@
 .hero {
     grid-area: hero;
-    background: url('../img/bg/bg_header.jpg') 50% 0% no-repeat;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -9,18 +8,30 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    height: 100%;
+    overflow: hidden;
 
     &--blog {
         grid-area: heroBlog;
     }
 }
 
+.hero__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1200px;
+}
+
+.hero__bg-img {
+    min-width: 100%;
+}
+
 .hero__content {
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    //top: 45%;
+    //left: 50%;
+    //transform: translate(-50%,-50%);
 
     @include phones {
         width: 100%;
@@ -28,7 +39,7 @@
     }
 
     &--blog {
-        top: 50%;
+        //top: 50%;
 
         @include tablets {
             top: 46%;
@@ -48,9 +59,9 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%,-50%);
 
     &--blog {
         width: 30%;
