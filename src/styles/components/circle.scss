@@ -16,8 +16,5 @@
     transition: all 0.5s;
     transform-origin: 50% 50%;
     transform: rotate(-90deg);
+    will-change: stroke-dasharray;
 }
-/*
-.circle:hover .circle__second {
-    stroke-dasharray: 56.52 282.6;
-}*/

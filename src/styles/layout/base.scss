@@ -29,6 +29,7 @@ body {
     font-size: 16px;
     color: $grey;
     background-color: #fff;
+    position: relative;
 
     @include phones {
         font-size: 14px;
