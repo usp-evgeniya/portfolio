@@ -14,9 +14,6 @@ module.exports = function () {
                 blurCSS.height = bgHeight + 'px';
                 blurCSS.width = bgWidth + 'px';
                 blurCSS.transform = 'translate(-50%,' + transformY + 'px)';
-
-
-                console.log(bgWidth, bgHeight, posTop, wrapperHeight, transformY);
             }
         }
     })();

@@ -1,19 +1,6 @@
 var $ = require('jquery');
 
-/*module.exports = $(function(){
-
-    $('.js-circle').on('mouseover touchstart',function (e) {
-        e.preventDefault();
-        var elem = $(e.target),
-          circleColored = elem.find('.js-circle__second'),
-          percent = circleColored.attr('data-circle'),
-          strokeDasharray = 2 * Math.PI * 45 * percent / 100;
-        circleColored.css('stroke-dasharray', strokeDasharray + ' 282.6');
-    });
-
-});*/
-
-module.exports = $(function(){
+module.exports = function(){
     var animateSvg = (function() {
         var checkDistance = function (scrollTop, elem) {
             var offset = elem.offset().top;
@@ -21,7 +8,6 @@ module.exports = $(function(){
             var topBorder = offset - scrollTop - windowMargin;
             var bottomEdge = elem.outerHeight(true) + offset;
             var bottomBorder = scrollTop + windowMargin - bottomEdge;
-            //console.log(topBorder,bottomBorder);
 
             return topBorder <=0 && bottomBorder <= 0;
         }
@@ -59,4 +45,4 @@ module.exports = $(function(){
 
     animateSvg.init();
     
-});
+};

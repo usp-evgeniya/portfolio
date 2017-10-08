@@ -8,9 +8,14 @@ const transition = require('./modules/transition');
 const blurInit = require('./modules/blur');
 const parallax = require('./modules/parallax');
 const parallaxIntro = require('./modules/parallax-intro');
+const preloader = require('./modules/preloader');
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
+}
+
+if (document.getElementsByClassName('js-circle').length > 0) {
+    skills();
 }
 
 if (document.getElementsByClassName('js-hero-btn').length > 0) {
@@ -28,4 +33,6 @@ if (document.getElementsByClassName('js-bg-hero').length > 0) {
 if (document.getElementsByClassName('js-parallax').length > 0) {
     parallaxIntro();
 }
+
+preloader();
 
