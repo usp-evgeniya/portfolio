@@ -8,6 +8,16 @@
     }
 }
 
+.blog__sidebar.fixed {
+    position: fixed;
+    width: 34%;
+
+    @include desktop-large {
+        width: 26.5%;
+
+    }
+}
+
 .blog__list {
     margin-top: 70px;
     margin-right: 100px;

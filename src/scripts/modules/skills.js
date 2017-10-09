@@ -22,7 +22,7 @@ module.exports = function(){
                             counter = 0;
 
                         function each() {
-                            var item = items.eq(counter);
+                            var item = items.eq(counter),
                                 circleColored = item.find('.js-circle__second'),
                                 percent = circleColored.attr('data-circle'),
                                 strokeDasharray = 2 * Math.PI * 45 * percent / 100;

@@ -9,6 +9,10 @@ const blurInit = require('./modules/blur');
 const parallax = require('./modules/parallax');
 const parallaxIntro = require('./modules/parallax-intro');
 const preloader = require('./modules/preloader');
+const articlesAnimate = require('./modules/articles');
+
+
+preloader();
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
@@ -34,5 +38,8 @@ if (document.getElementsByClassName('js-parallax').length > 0) {
     parallaxIntro();
 }
 
-preloader();
+if (document.getElementsByClassName('js-article').length > 0) {
+    articlesAnimate();
+}
+
 

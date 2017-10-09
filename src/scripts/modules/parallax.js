@@ -1,5 +1,3 @@
-// https://www.youtube.com/watch?v=LJ5NDW7AxtE
-
 module.exports = function () {
 
     var parallax = (function () {
@@ -22,6 +20,7 @@ module.exports = function () {
                 this.move(bg, wScroll, 50);
                 this.move(bgTitle, wScroll, 25);
                 this.move(owner, wScroll, 5);
+                bgTitle.style.left = '0%';
             }
         }
     }());

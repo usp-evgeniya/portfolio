@@ -1,18 +1,3 @@
-/*module.exports = function() {
-    var sections = document.getElementsByClassName('section'),
-        target = sections[1],
-        elem = document.querySelector('.js-hero-btn');
-        targetCoordinateX = target.getBoundingClientRect().left,
-        targetCoordinateY = target.getBoundingClientRect().top;
-        console.log(target);
-
-        elem.addEventListener('click', function(e){
-            e.preventDefault();
-            console.log(elem);
-
-            window.scrollTo( targetCoordinateX, targetCoordinateY);
-        });
-}*/
 
 var $ = require('jquery');
 

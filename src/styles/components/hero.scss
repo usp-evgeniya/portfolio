@@ -35,7 +35,7 @@
 
     @include phones {
         width: 100%;
-        top: 40%;
+        top: 20%;
     }
 
     &--blog {
@@ -46,7 +46,7 @@
         }
 
         @include phones {
-            top: 42%;
+            top: 20%;
         }
     }
 
