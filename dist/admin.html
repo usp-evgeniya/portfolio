@@ -32,13 +32,13 @@
         </div>
         <nav class="admin__header-tabs">
           <ul class="admin__tabs-list">
-            <li class="admin__tabs-item">works</li>
-            <li class="admin__tabs-item">about</li>
-            <li class="admin__tabs-item">blog</li>
+            <li class="admin__tabs-item js-tab">about</li>
+            <li class="admin__tabs-item js-tab">blog</li>
+            <li class="admin__tabs-item js-tab">works</li>
           </ul>
         </nav>
       </header>
-      <section class="admin__content admin__content--about active">
+      <section class="admin__content admin__content--about js-section active">
         <div class="admin__content-container container">
           <div class="admin__content-title">Страница «Обо мне»</div>
           <div class="admin__content-block">
@@ -51,21 +51,21 @@
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="80" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">CSS3</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="60" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">JavaScript &amp; jQuery</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="40" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                 </table>
               </li>
@@ -77,28 +77,28 @@
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="25" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">MySQL</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="30" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">Node.js &amp; npm</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="40" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">Mongo.db</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="30" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                 </table>
               </li>
@@ -110,37 +110,37 @@
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="50" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">Gulp</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="60" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">Bower</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="40" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                   <tr class="admin__skill-row">
                     <td class="admin__skill-name">Webpack</td>
                     <td class="admin__skill-value"> 
                       <input class="admin__skill-input" type="number" placeholder="20" name="login" required>
                     </td>
-                    <td class="admin__skill-percent">%<img class="admin__img"></td>
+                    <td class="admin__skill-percent">%</td>
                   </tr>
                 </table>
               </li>
-            </ul>
+            </ul><img class="admin__img">
             <button class="admin__button admin__skills-btn" type="submit" name="save">Сохранить</button>
           </div>
         </div>
       </section>
-      <section class="admin__content admin__content--blog">
+      <section class="admin__content admin__content--blog js-section">
         <div class="admin__content-container container">
           <div class="admin__content-title">Страница «Блог»</div>
           <div class="admin__content-block">
@@ -154,7 +154,7 @@
           </div>
         </div>
       </section>
-      <section class="admin__content admin__content--works">
+      <section class="admin__content admin__content--works js-section">
         <div class="admin__content-container container">
           <div class="admin__content-title">Страница «Мои работы»</div>
           <div class="admin__content-block">
