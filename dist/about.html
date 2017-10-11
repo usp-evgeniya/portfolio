@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&amp;amp;subset=cyrillic">
   </head>
   <body>
+    <div class="preloader" id="js-preloader">
+      <div class="preloader__img">
+        <svg class="preloader__icon" id="preloader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+          <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    " cx="72" cy="71.999" r="70"></circle>
+          <circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    " cx="72" cy="72" r="55"></circle>
+          <circle fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"></circle>
+        </svg>
+        <div class="preloader__text" id="js-load-percent">0</div>
+      </div>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
@@ -41,7 +51,7 @@
                 <use xlink:href="img/icons/symbol/sprite.svg#close"></use>
               </svg>
             </button>
-            <nav class="hamburger__menu">
+            <nav class="hamburger__menu js-hamburger__menu">
               <ul class="hamburger__list">
                 <li class="hamburger__item"><a class=".hamburger__link--works hamburger__link title" href="./works.html">Мои работы</a></li>
                 <li class="hamburger__item"><a class=".hamburger__link--blog hamburger__link title" href="./blog.html">Блог</a></li>
@@ -54,10 +64,11 @@
       </header>
       <main class="main main--about">
         <section class="section hero">
-          <svg class="hero__bg-title">
+          <div class="hero__bg js-bg-hero"><img class="hero__bg-img" src="img/bg/bg_header.jpg"></div>
+          <svg class="hero__bg-title js-bg-title">
             <use xlink:href="img/icons/symbol/sprite.svg#portfolio_header"></use>
           </svg>
-          <div class="hero__content">
+          <div class="hero__content js-hero-content">
             <div class="hero__owner owner">
               <div class="owner__photo"><img class="owner__img" src="img/content/My_image.jpg"></div>
               <div class="owner__title">Евгения Морозова</div><span class="owner__description">Личный сайт веб-разработчика</span>

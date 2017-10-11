@@ -1,13 +1,25 @@
-module.exports = function() {
-    var target = document.querySelector('.js-about'),
-        elem = document.querySelector('.js-hero-btn');
-        //targetCoordinateX = target.getBoundingClientRect().left,
-        //targetCoordinateY = target.getBoundingClientRect().top;
-        console.log('abc');
 
-        /*elem.addEventListener('click', function(e){
+var $ = require('jquery');
+
+module.exports = function() {
+    function ScrollTo(sectionNumber) {
+        var target = $('.section').eq(sectionNumber).offset().top
+        $('html, body').animate({
+            scrollTop : target
+        }, 1000);
+    }
+
+    $(function() {
+        $('.js-hero-btn').on('click', function(e) {
             e.preventDefault();
-            console.log(elem);
-            window.scrollTo( targetCoordinateX, targetCoordinateY);
-        });*/
+            ScrollTo(1)
+        })
+    })
+
+    $(function() {
+        $('.js-comments-btn').on('click', function(e) {
+            e.preventDefault();
+            ScrollTo(0)
+        })
+    })
 }
