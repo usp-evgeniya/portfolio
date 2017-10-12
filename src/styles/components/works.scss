@@ -31,7 +31,7 @@
     @include tablets {
         height: 1014px;
         grid-template-columns: 100%;
-        grid-template-rows: 50% 25% 1fr;
+        grid-template-rows: 50% 1fr 1fr;
         grid-template-areas: 
         "preview"
         "description"
@@ -40,7 +40,7 @@
 
     @include phones {
         height: 100vh;
-        grid-template-rows: 45% 40% 1fr;
+        grid-template-rows: 45% 1fr 15%;
     }
 }
 
@@ -59,6 +59,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     @include phones {
         width: 97%;
@@ -140,6 +142,24 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+.works__img.animate {
+    animation: fading 2s linear;
+}
+
+@keyframes fading {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
