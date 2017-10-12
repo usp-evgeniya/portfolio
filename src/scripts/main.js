@@ -10,9 +10,12 @@ const parallax = require('./modules/parallax');
 const parallaxIntro = require('./modules/parallax-intro');
 const preloader = require('./modules/preloader');
 const articlesAnimate = require('./modules/articles');
+const adminTabs = require('./modules/admin');
 
-
-preloader();
+if (document.images.length > 0) {
+    preloader();
+    
+}
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
@@ -40,6 +43,10 @@ if (document.getElementsByClassName('js-parallax').length > 0) {
 
 if (document.getElementsByClassName('js-article').length > 0) {
     articlesAnimate();
+}
+
+if (document.getElementsByClassName('js-tab').length > 0) {
+    adminTabs();
 }
 
 

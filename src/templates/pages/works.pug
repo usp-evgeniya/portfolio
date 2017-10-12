@@ -2,45 +2,7 @@ extends ../template
 
 block variables
     -var title = 'Мои работы'
-        - 
-            var worksList = [
-                {
-                subtitle: "Лендинг для магазина бургеров Mr.Burger", 
-                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp",
-                link: "https://usp-evgeniya.github.io/burgers/",
-                img: "img/content/works/work1.png",
-                active: "active",
-                },
-                {
-                subtitle: "Интернет-магазин лабораторного оборудования и приборов", 
-                techs: "HTML5, CSS3, JavaScript & jQuery",
-                link: "#",
-                img: "img/content/works/work2.png",
-                active: "",
-                },
-                {
-                subtitle: "Лендинг для студии красоты Пион", 
-                techs: "HTML5, CSS3, JavaScript & jQuery",
-                link: "#",
-                img: "img/content/works/work3.png",
-                active: "",
-                }
-            ]
-        - 
-            var commentsList = [
-                {
-                comment: "Прохождение обучения веб-разработке в LoftSchool — это не просто так! 2 месяца только самых тяжелых испытаний и бессонных ночей!", 
-                person: "Ковальчук Дмитрий",
-                occupation: "Основатель школы",
-                img: "img/content/dmitry.jpg"
-                },
-                {
-                comment: "Женя прошла все три курса Профессии в моей группе, продуктивно поработала и получила отличные знания и навыки.", 
-                person: "Болотова Ольга",
-                occupation: "Наставник группы",
-                img: "img/content/olya.jpg"
-                }
-            ]
+    include ../common/variables.pug
 
 block content
     .wrapper
@@ -98,7 +60,7 @@ block content
                         .subtitle.subtitle--contactform Связаться со мной
                         form(action="server.php" method="post").form#form.form--contacts
                             input.form__input(type="text" placeholder="Имя" name="name" required)
-                            input.form__input(type="text" placeholder="Email" name="email")
+                            input.form__input(type="email" placeholder="Email" name="email" required)
                             textarea.form__input.form__input--textarea(type="text" placeholder="Ваше сообщение" name="message")
                             .form__buttons
                                 button.form__button.form__button--submit(type="submit" name="submit") Отправить

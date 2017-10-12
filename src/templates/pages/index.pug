@@ -2,7 +2,7 @@ extends ../template
 
 block variables
     - var title = 'Портфолио - Главная страница'
-
+    include ../common/variables.pug
 
 block content
     main.main.main--intro.js-main-intro
@@ -22,27 +22,8 @@ block content
                         .socials.socials--intro
                             include ../common/socials.pug
                     nav.menu.menu--intro
-                        - 
-                            var menuItems = [
-                                {
-                                title: "Мои работы", 
-                                link: "./works.html",
-                                mod: "works"
-                                },
-                                {
-                                title: "Обо мне", 
-                                link: "./about.html",
-                                mod: "about"
-                                },
-                                {
-                                title: "Блог", 
-                                link: "./blog.html",
-                                mod: "blog"
-                                }
-                            ]
-
                         ul.menu__list
-                            each item in menuItems
+                            each item in menuItemsIntro
                                 li.menu__item(class=`menu__item--${item.mod}`)
                                     a(href=`${item.link}`).menu__link #{item.title}
             section.auth
