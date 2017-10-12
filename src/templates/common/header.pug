@@ -1,26 +1,4 @@
-- 
-    var menuItems = [
-        {
-        mod: "works",
-        title: "Мои работы", 
-        link: "./works.html"
-        },
-        {
-        mod: "blog",
-        title: "Блог", 
-        link: "./blog.html"
-        },
-        {
-        mod: "about",
-        title: "Обо мне", 
-        link: "./about.html"
-        },
-        {
-        mod: "auth",
-        title: "Авторизация", 
-        link: "./index.html"
-        }
-    ]
+include ../common/variables.pug
 
 header.header
     .header__container
@@ -34,7 +12,7 @@ header.header
                     use(xlink:href="img/icons/symbol/sprite.svg#close")
             nav.hamburger__menu.js-hamburger-menu
                 ul.hamburger__list
-                    each item in menuItems
+                    each item in menuItemsHeader
                         li.hamburger__item
                             a(href=`${item.link}` class=`.hamburger__link--${item.mod}`).hamburger__link.title #{item.title}
 
