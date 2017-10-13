@@ -38,6 +38,8 @@
     &--reset {
         background-color: rgba(0,191,165,0.3);
     }
+
+
 }
 
 
@@ -147,6 +149,14 @@
 
         & + .form__id .form__icon {
             fill: $marine;
+        }
+    }
+
+    &.error {
+        border: 1px solid #e44845;
+
+        & + .form__id .form__icon {
+            fill: #e44845;
         }
     }
 

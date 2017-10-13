@@ -1,3 +1,5 @@
+"use strict";
+
 //const $ = require('jquery');
 const hamburgerInit = require('./modules/hamburger');
 const welcome = require('./modules/welcome');
@@ -8,13 +10,18 @@ const transition = require('./modules/transition');
 const blurInit = require('./modules/blur');
 const parallax = require('./modules/parallax');
 const parallaxIntro = require('./modules/parallax-intro');
-const preloader = require('./modules/preloader');
+const preloaderInit = require('./modules/preloader');
 const articlesAnimate = require('./modules/articles');
 const adminTabs = require('./modules/admin');
+const closeMessage = require('./modules/close');
 
 if (document.images.length > 0) {
-    preloader();
+    preloaderInit();
     
+} else {
+    document.getElementById('js-preloader').classList.add('done');
+	document.body.style.overflow = 'auto';
+
 }
 
 if (document.getElementsByClassName('js-slider').length > 0) {
@@ -47,6 +54,10 @@ if (document.getElementsByClassName('js-article').length > 0) {
 
 if (document.getElementsByClassName('js-tab').length > 0) {
     adminTabs();
+}
+
+if (document.getElementsByClassName('js-contact-status').length > 0) {
+    closeMessage();
 }
 
 

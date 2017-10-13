@@ -6,8 +6,6 @@ module.exports = function(){
         var sections = $('.js-section'),
             tabs = $('.js-tab');
 
-        console.log(sections);
-
         var addActive = function (Eq) {
             sections.eq(Eq).addClass('active')
                 .siblings().removeClass('active');
