@@ -1,25 +1,31 @@
     module.exports = function() {
         var slides = [
             {
-            subtitle: "Лендинг для магазина бургеров Mr.Burger", 
-            techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp",
-            link: "https://usp-evgeniya.github.io/burgers/",
-            img: "img/content/works/work1.png"
-            },
-            {
-            subtitle: "Интернет-магазин лабораторного оборудования и приборов", 
-            techs: "HTML5, CSS3, JavaScript & jQuery",
-            link: "#",
-            img: "img/content/works/work2.png"
-            },
-            {
-            subtitle: "Лендинг для студии красоты Пион", 
-            techs: "HTML5, CSS3, JavaScript & jQuery",
-            link: "#",
-            img: "img/content/works/work3.png"
-            }
-        ];
-    
+                subtitle: "Лендинг для магазина бургеров Mr.Burger",
+                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
+                link: "https://usp-evgeniya.github.io/burgers/",
+                img: "img/content/works/burgers.png",
+                active: "active",
+            }, {
+                subtitle: "Сайт фитнес-клуба Афродита",
+                techs: "HTML5, CSS3, Git",
+                link: "https://usp-evgeniya.github.io/project_afrodita/",
+                img: "img/content/works/fitness.png",
+                active: "",
+            }, {
+                subtitle: "Лендинг для студии красоты Пион",
+                techs: "HTML5, CSS3, Git",
+                link: "https://usp-evgeniya.github.io/project_peony/",
+                img: "img/content/works/peony.png",
+                active: "",
+            }, {
+                subtitle: "Сайт-портфолио веб-разработчика",
+                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
+                link: "https://usp-evgeniya.github.io/portfolio/dist/",
+                img: "img/content/works/portfolio.png",
+                active: "",
+            }];
+   
         var slider = document.querySelector('.js-slider'),
             showingSlide = document.querySelector('.js-slide-img'),
             nextSlide = document.querySelector('.js-slide-next'),
