@@ -11,11 +11,11 @@ block content
         main.main.main--blog
             section.section.hero.hero--blog
                 .hero__bg.js-bg-hero
-                    img(src="img/bg/bg_header.jpg").hero__bg-img
+                    img(src="img/bg/bg_header.jpg" alt="Горный ландшафт").hero__bg-img
                 .hero__content.hero__content--blog.js-hero-content
                     .hero__owner.owner
                         .owner__photo
-                            img(src="img/content/My_image.jpg").owner__img
+                            img(src="img/content/My_image.jpg" alt="Веб-разработчик").owner__img
                         .title__wrapper
                             h1.title.title--blog Блог
                             svg.title__bg.title__bg--blog.js-bg-title
@@ -32,7 +32,7 @@ block content
                 ul.articles__list.js-articles-list
                     each item in articlesList
                         li.articles__item.js-article
-                            acticle.articles__content
+                            article.articles__content
                                 h2.subtitle.subtitle--articles #{item.title}
                                 .articles__date #{item.date}
                                 .articles__text

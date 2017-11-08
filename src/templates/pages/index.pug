@@ -9,14 +9,14 @@ block content
         #parallax.parallax.js-parallax
             - for (var i = 1; i < 10; i++)
                 .parallax__layer
-                    img(src=`img/parallax/layer-0${i}.png` class = `parallax__img--0${i}`).parallax__img
+                    img(src=`img/parallax/layer-0${i}.png` alt="Горы" class = `parallax__img--0${i}`).parallax__img
         .main__flipper
-            section.intro
+            .intro
                 .intro__welcome
                     .intro__group
                         .intro__owner.owner
                             .owner__photo
-                                img(src="img/content/My_image.jpg").owner__img
+                                img(src="img/content/My_image.jpg" alt="Веб-разработчик").owner__img
                             h2.owner__title.owner__title--intro Евгения Морозова
                             span.owner__description Личный сайт веб-разработчика
                         .socials.socials--intro
@@ -26,7 +26,7 @@ block content
                             each item in menuItemsIntro
                                 li.menu__item(class=`menu__item--${item.mod}`)
                                     a(href=`${item.link}`).menu__link #{item.title}
-            section.auth
+            .auth
                 .auth-form
                     form(action="server.php" method="post").form#form
                         .form__inputs
@@ -50,11 +50,11 @@ block content
                             .form__radios
                                 .form__caption.form__caption--question Вы точно не робот?
                                 label.form__label.form__label--radio.form__label--radioyes
-                                    input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Да" checked)
+                                    input.form__radio(type="radio" name="confirm" value="Да" checked)
                                     span.form__radio-fake
                                     span.form__caption.form__caption--radio Да
                                 label.form__label.form__label--radio.form__label--radiosure
-                                    input.form__radio(type="radio" placeholder="Пароль" name="confirm" value="Не уверен")
+                                    input.form__radio(type="radio" name="confirm" value="Не уверен")
                                     span.form__radio-fake
                                     span.form__caption.form__caption--radio Не уверен
                         .form__buttons

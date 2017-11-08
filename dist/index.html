@@ -16,8 +16,8 @@
     <div class="preloader" id="js-preloader">
       <div class="preloader__img">
         <svg class="preloader__icon" id="preloader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
-          <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    " cx="72" cy="71.999" r="70"></circle>
-          <circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    " cx="72" cy="72" r="55"></circle>
+          <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="71.999" r="70"></circle>
+          <circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" cx="72" cy="72" r="55"></circle>
           <circle fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"></circle>
         </svg>
         <div class="preloader__text" id="js-load-percent">0</div>
@@ -25,22 +25,22 @@
     </div>
     <main class="main main--intro js-main-intro">
       <div class="parallax js-parallax" id="parallax">
-        <div class="parallax__layer"><img class="parallax__img--01 parallax__img" src="img/parallax/layer-01.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--02 parallax__img" src="img/parallax/layer-02.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--03 parallax__img" src="img/parallax/layer-03.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--04 parallax__img" src="img/parallax/layer-04.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--05 parallax__img" src="img/parallax/layer-05.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--06 parallax__img" src="img/parallax/layer-06.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--07 parallax__img" src="img/parallax/layer-07.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--08 parallax__img" src="img/parallax/layer-08.png"></div>
-        <div class="parallax__layer"><img class="parallax__img--09 parallax__img" src="img/parallax/layer-09.png"></div>
+        <div class="parallax__layer"><img class="parallax__img--01 parallax__img" src="img/parallax/layer-01.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--02 parallax__img" src="img/parallax/layer-02.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--03 parallax__img" src="img/parallax/layer-03.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--04 parallax__img" src="img/parallax/layer-04.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--05 parallax__img" src="img/parallax/layer-05.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--06 parallax__img" src="img/parallax/layer-06.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--07 parallax__img" src="img/parallax/layer-07.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--08 parallax__img" src="img/parallax/layer-08.png" alt="Горы"></div>
+        <div class="parallax__layer"><img class="parallax__img--09 parallax__img" src="img/parallax/layer-09.png" alt="Горы"></div>
       </div>
       <div class="main__flipper">
-        <section class="intro">
+        <div class="intro">
           <div class="intro__welcome">
             <div class="intro__group">
               <div class="intro__owner owner">
-                <div class="owner__photo"><img class="owner__img" src="img/content/My_image.jpg"></div>
+                <div class="owner__photo"><img class="owner__img" src="img/content/My_image.jpg" alt="Веб-разработчик"></div>
                 <h2 class="owner__title owner__title--intro">Евгения Морозова</h2><span class="owner__description">Личный сайт веб-разработчика</span>
               </div>
               <div class="socials socials--intro">
@@ -68,8 +68,8 @@
               </ul>
             </nav>
           </div>
-        </section>
-        <section class="auth">
+        </div>
+        <div class="auth">
           <div class="auth-form">
             <form class="form" action="server.php" method="post" id="form">
               <div class="form__inputs">
@@ -95,10 +95,10 @@
                 <div class="form__radios">
                   <div class="form__caption form__caption--question">Вы точно не робот?</div>
                   <label class="form__label form__label--radio form__label--radioyes">
-                    <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Да" checked><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Да</span>
+                    <input class="form__radio" type="radio" name="confirm" value="Да" checked><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Да</span>
                   </label>
                   <label class="form__label form__label--radio form__label--radiosure">
-                    <input class="form__radio" type="radio" placeholder="Пароль" name="confirm" value="Не уверен"><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Не уверен</span>
+                    <input class="form__radio" type="radio" name="confirm" value="Не уверен"><span class="form__radio-fake"></span><span class="form__caption form__caption--radio">Не уверен</span>
                   </label>
                 </div>
               </div>
@@ -108,7 +108,7 @@
               </div>
             </form>
           </div>
-        </section>
+        </div>
       </div>
       <button class="intro__btn-auth js-btn-auth" type="button">Авторизоваться</button>
       <div class="copyright container">
