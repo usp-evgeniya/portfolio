@@ -9,7 +9,7 @@ block content
     .wrapper
         include ../common/header.pug
         main.main.main--blog
-            section.section.hero.hero--blog
+            .section.hero.hero--blog
                 .hero__bg.js-bg-hero
                     img(src="img/bg/bg_header.jpg" alt="Горный ландшафт").hero__bg-img
                 .hero__content.hero__content--blog.js-hero-content
@@ -28,7 +28,7 @@ block content
                 ul.blog__list
                     each article in articlesList
                         li.blog__item.js-sidebar-article #{article.title}
-            section.articles.js-section-articles
+            .articles.js-section-articles
                 ul.articles__list.js-articles-list
                     each item in articlesList
                         li.articles__item.js-article
