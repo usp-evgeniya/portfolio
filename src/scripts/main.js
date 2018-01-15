@@ -14,6 +14,7 @@ const preloaderInit = require('./modules/preloader');
 const articlesAnimate = require('./modules/articles');
 const adminTabs = require('./modules/admin');
 const closeMessage = require('./modules/close');
+const formSubmit = require('./modules/form');
 
 if (document.images.length > 0) {
     preloaderInit();
@@ -60,4 +61,7 @@ if (document.getElementsByClassName('js-contact-status').length > 0) {
     closeMessage();
 }
 
+if (document.getElementsById('form').length > 0) {
+    formSubmit();
+}
 
