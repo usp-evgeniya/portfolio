@@ -5,6 +5,7 @@
     z-index: 50;
     margin-bottom: -2px;
     align-self: end;
+    fill: $white;
 
     @include tablets {
         margin-bottom: -1px;
@@ -48,4 +49,8 @@
     .triangle__right {
         fill: #faf8f0;
     }
+}
+
+.triangles--policy {
+    grid-area: hero;
 }

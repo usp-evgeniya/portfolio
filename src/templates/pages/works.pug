@@ -49,11 +49,12 @@ block content
                         li.comments__item
                             .comments__text
                                 p #{item.comment}
-                            .comments__photo
-                                img(src=`${item.img}` alt=`${item.person}`).comments__img
-                            .comments__person
-                                .comments__person--name #{item.person}
-                                .comments__person--occupation #{item.occupation}
+                            .comments__description
+                                .comments__photo
+                                    img(src=`${item.img}` alt=`${item.person}`).comments__img
+                                .comments__person
+                                    a(href=`${item.link}`).comments__person--name #{item.person}
+                                    .comments__person--occupation #{item.occupation}
                 .contact-form__wrapper.js-blur-wrapper
                     .contact-form__blur.js-blur-form
                     .contact-form
@@ -67,6 +68,7 @@ block content
                                 button.form__button.form__button--reset(type="reset" name="reset") Очистить
                     .contact-form__status.js-contact-status Сообщение отправлено
                         button.contact-form__status-btn.js-close(type="button" name="close") Закрыть
+                .form__policy Нажимая на кнопку, Вы даете согласие на обработку Ваших персональных данных и соглашаетесь с <a href="./policy.html"> Политикой конфиденциальности</a>
                 button.comments__btn-arrow.js-comments-btn(type="button")
                     svg.comments__arrow-up
                         use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")

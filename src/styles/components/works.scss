@@ -31,7 +31,7 @@
     @include tablets {
         height: 1014px;
         grid-template-columns: 100%;
-        grid-template-rows: 50% 1fr 1fr;
+        grid-template-rows: 1fr 1fr 20%;
         grid-template-areas: 
         "preview"
         "description"
@@ -40,7 +40,7 @@
 
     @include phones {
         height: 100vh;
-        grid-template-rows: 45% 1fr 15%;
+        grid-template-rows: 1fr 1fr 15%;
     }
 }
 

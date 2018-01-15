@@ -86,3 +86,14 @@ p a {
     }
 
 }
+
+.text ul li {
+    padding-left: 20px; 
+    text-indent: -20px;
+}
+
+.text ul li:before {
+    padding-right: 15px;
+    color: $marine;
+    content: "•";
+}

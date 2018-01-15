@@ -18,6 +18,8 @@
 .form__buttons {
     width: 100%;
     display: flex;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
 }
 
 .form__button {
@@ -284,4 +286,35 @@
 
 }
 
+
+.form__policy {
+    z-index: 100;
+    color: $white;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 70px;
+    text-align: center;
+    width: 380px;
+    opacity: 0.8;
+
+
+    @include tablets {
+        width: 348px;
+    }
+    @include phones {
+        width: 95%;
+        margin-bottom: 30px;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        transition: all 0.5s;
+    }
+
+    a:hover {
+        color: $marine;
+    }
+}
   

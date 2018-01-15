@@ -1,30 +1,52 @@
     module.exports = function() {
         var slides = [
             {
-                subtitle: "Лендинг для магазина бургеров Mr.Burger",
-                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
+                subtitle: "Адаптивная вёрстка лендинга магазина бургеров Mr.Burger",
+                techs: "Адаптивный сайт, постраничный скролл, удобный слайдер, выпадающие и раскрывающиеся меню, форма заказа, интерактивная кастомизированная карта. Технологии: HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
                 link: "https://usp-evgeniya.github.io/burgers/",
                 img: "img/content/works/burgers.png",
-                active: "active",
             }, {
-                subtitle: "Сайт фитнес-клуба Афродита",
-                techs: "HTML5, CSS3, Git",
+                subtitle: "Вёрстка сайта фитнес-клуба Афродита",
+                techs: "Качественная верстка по БЭМ, плавные переходы, анимация. Технологии: HTML5, CSS3, Git",
                 link: "https://usp-evgeniya.github.io/project_afrodita/",
                 img: "img/content/works/fitness.png",
-                active: "",
             }, {
-                subtitle: "Лендинг для студии красоты Пион",
-                techs: "HTML5, CSS3, Git",
+                subtitle: "Дизайн и вёрстка лендинга для студии красоты Пион",
+                techs: "Яркий насыщенный тёплый дизайн, светлые тона, продуманная структура. Технологии: HTML5, CSS3, Git",
                 link: "https://usp-evgeniya.github.io/project_peony/",
                 img: "img/content/works/peony.png",
-                active: "",
             }, {
-                subtitle: "Сайт-портфолио веб-разработчика",
-                techs: "HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
+                subtitle: "Вёрстка и программирование сайта-портфолио веб-разработчика",
+                techs: "Адаптивный сайт, parallax-эффекты, стильный слайдер, форма обратной связи, страница авторизации, интерактивная кастомизированная карта. Технологии: HTML5, CSS3, JavaScript & jQuery, Ajax, Gulp, Git",
                 link: "https://usp-evgeniya.github.io/portfolio/dist/",
                 img: "img/content/works/portfolio.png",
-                active: "",
-            }];
+            }, {
+                subtitle: "Дизайн интернет-магазина лабораторного оборудования",
+                techs: "Продуманная структура, простой и понятный дизайн, реализация адаптивных версий",
+                link: "http://colibri-web.ru/dizayn-internet-magazina-laboratornogo-oborudovaniya/",
+                img: "img/content/works/laboratory.png",
+            }, {
+                subtitle: "Редизайн лендинга по ремонту квартир",
+                techs: "Спокойная цветовая гамма, понятная структура, четкие описания",
+                link: "http://colibri-web.ru/redizayn-lendinga-po-remontu-kvartir",
+                img: "img/content/works/home_repair.png",
+            }, {
+                subtitle: "Редизайн лендинга школы танцев Pole Dance",
+                techs: "Четкая структура, привлекательный яркий дизайн, бизнес-подход",
+                link: "http://colibri-web.ru/redizayn-lendinga-shkoly-tantsev-pole-dance",
+                img: "img/content/works/pole_dance.png",
+            }, {
+                subtitle: "Создание корпоративного сайта компании по математическому моделированию",
+                techs: "Лаконичный дизайн, простой и информативный формат. Детальная информация о компании и различных аспектах ее деятельности представлена на отдельных страницах",
+                link: "http://msdecision.nichost.ru/",
+                img: "img/content/works/msdecisions.png",
+            }, {
+                subtitle: "Создание сайта стоматологической клиники Ваша стоматология",
+                techs: "Лаконичный душевный дизайн, четкая структура, бизнес-ориентированность. Уникальные векторные иконки, удобные формы записи и подписки на новости. Главная страница в форме лендинга",
+                link: "https://your-dent.ru/",
+                img: "img/content/works/your_dent.png",
+            }
+        ];
    
         var slider = document.querySelector('.js-slider'),
             showingSlide = document.querySelector('.js-slide-img'),

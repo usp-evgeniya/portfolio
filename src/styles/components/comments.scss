@@ -1,5 +1,5 @@
 .comments {
-    grid-area: comments;
+    //grid-area: comments;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,43 +28,52 @@
     display: flex;
     justify-content: center;
     align-items: space-between;
-    width: 95%;
-    margin-bottom: 70px;
+    width: 80%;
+    margin-bottom: 55px;
     flex-wrap: wrap;
     
     @include tablets {
         width: 95%;
         //justify-content: space-between;
-        margin-bottom: 25px;
-        
+        margin-bottom: 15px;
     }
 
     @include phones {
         flex-direction: column;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
+        align-items: center;
     }
 }
 
 .comments__item {
-    //width: 49%;
-    display: grid;
-    grid-template-columns: 100px 280px;
-    //grid-template-rows: 100% 100%;
-    grid-template-areas: 
-    "comment comment"
-    "photo person";
+    //display: grid;
+    //grid-template-columns: 100px 280px;
+    //grid-template-areas: 
+    //"comment comment"
+    //"photo person";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 380px;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    margin: 15px;
+
 
     @include tablets {
-        grid-template-columns: 100px 248px;
-        margin-bottom: 25px;
+        //grid-template-columns: 100px 248px;
+        width: 320px;
+        //margin-bottom: 25px;
     }
 
     @include phones {
         width: 100%;
-        grid-template-columns: 80px 1fr;
+        padding: 20px;
+        //grid-template-columns: 80px 1fr;
         
         &:last-child {
-            margin-bottom: 0;
+            //margin-bottom: 0;
         }
     }
 
@@ -76,8 +85,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: photo;
-    align-self: center;
+    //grid-area: photo;
+    //align-self: center;
+    margin-right: 20px;
 
     @include phones {
         @include circle(55px,$white);
@@ -90,9 +100,9 @@
 
 
 .comments__text {
-    grid-area: comment;
+    //grid-area: comment;
     line-height: 26px;
-    padding-right: 30px;
+    //padding-right: 30px;
 
     & p:last-child {
         margin-bottom: 20px;
@@ -136,14 +146,21 @@
 
 }
 
+.comments__description {
+    display: flex;
+    align-items: center;
+}
+
 .comments__person {
     color: $marine;
-    grid-area: person;
-    align-self: center;
+    max-width: 200px;
+    //grid-area: person;
+    //align-self: center;
 
     &--name {
         @include roboto(600);
-
+        color: $marine;
+        text-decoration: none;
     }
 
     &--occupation {
@@ -154,6 +171,7 @@
     @include tablets {
         font-size: 14px;
         line-height: 24px;
+        max-width: 160px;
 
     }
 

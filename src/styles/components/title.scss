@@ -75,7 +75,7 @@
     &--comments {
         width: 380px;
         margin-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 45px;
 
         @include tablets {
             width: 472px;
@@ -91,6 +91,21 @@
         }
 
 
+
+    }
+
+    &--policy {
+        width: 60%;
+        margin-bottom: 45px;
+
+        @include tablets {
+            margin-bottom: 32px;
+        }
+
+        @include phones {
+            width: 95%;
+            margin-bottom: 20px;
+        }
 
     }
 }

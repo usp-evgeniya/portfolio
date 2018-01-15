@@ -109,3 +109,21 @@
     }
 
 }
+
+.main--policy {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 603px 1fr;
+    grid-template-areas: 
+    "hero"
+    "policy";
+
+    @include tablets {
+        grid-template-rows: 506px 1fr;
+    }
+
+    @include phones {
+        grid-template-rows: 98vh 1fr;
+    }
+
+}

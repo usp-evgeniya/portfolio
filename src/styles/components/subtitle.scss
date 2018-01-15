@@ -25,6 +25,7 @@
 
     &--about {
         margin-bottom: 30px;
+        text-align: center;
 
         @include tablets {
             margin-bottom: 5px;
@@ -99,14 +100,18 @@
         margin-bottom: 30px;
         margin-top: 30px;
         display: flex;
+        color: $white;
+        @include title-decor($white,20px);
 
         @include tablets {
             margin-bottom: 11px;
+            @include title-decor($white,15px);
         }
+
 
         @include phones {
             margin-bottom: 22px;
-    
+            @include title-decor($white,11px);
         }
     }
 
