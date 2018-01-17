@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-module.exports = $(function(){
+module.exports = function(){
     var hamburger = $('.js-hamburger');
     $('.js-hamburger__btn').on('click',function (e) {
         e.preventDefault();
@@ -12,5 +12,5 @@ module.exports = $(function(){
             $('body, html').css("overflow", "auto");
         }
     });
-});
+};
 

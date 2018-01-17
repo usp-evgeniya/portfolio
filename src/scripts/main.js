@@ -1,6 +1,6 @@
 "use strict";
 
-//const $ = require('jquery');
+const $ = require('jquery');
 const hamburgerInit = require('./modules/hamburger');
 const welcome = require('./modules/welcome');
 const googleMap = require('./modules/map');
@@ -22,8 +22,15 @@ if (document.images.length > 0) {
 } else {
     document.getElementById('js-preloader').classList.add('done');
 	document.body.style.overflow = 'auto';
-
 }
+
+if (document.getElementsByClassName('js-hamburger').length > 0) {
+    hamburgerInit();
+}
+
+/*if (document.getElementsByClassName('map').length > 0) {
+    googleMap();
+}*/
 
 if (document.getElementsByClassName('js-slider').length > 0) {
     fillSlider();
@@ -61,7 +68,7 @@ if (document.getElementsByClassName('js-contact-status').length > 0) {
     closeMessage();
 }
 
-if (document.getElementsById('form').length > 0) {
+if (document.getElementsByClassName('js-form').length > 0) {
     formSubmit();
 }
 

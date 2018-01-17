@@ -22,7 +22,7 @@ module.exports = function () {
                 this.move(owner, wScroll, 5);
                 bgTitle.style.left = '0%';
             }
-        }
+        };
     }());
     window.onscroll = function () {
         var wScroll = window.pageYOffset;

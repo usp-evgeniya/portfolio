@@ -12,7 +12,7 @@ module.exports = function(){
 
             tabs.eq(Eq).addClass('active')
                 .siblings().removeClass('active');
-        }
+        };
 
         addActive(0);
 
@@ -23,14 +23,14 @@ module.exports = function(){
                         showEq = elem.index();
                         
                     addActive(showEq);
-                })
+                });
         
             }
-        }
+        };
 
 
     }());
 
     linkTabs.init();
 
-}
+};

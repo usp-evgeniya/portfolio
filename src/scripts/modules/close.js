@@ -1,10 +1,10 @@
 var $ = require('jquery');
 
-module.exports = $(function(){
+module.exports = function(){
     var statusMessage = $('.js-contact-status');
-    var close = $('.js-close')
+    var close = $('.js-close');
     close.on('click',function (e) {
         e.preventDefault();
         statusMessage.removeClass('show');
     });
-});
+};

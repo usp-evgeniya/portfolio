@@ -15,13 +15,13 @@ module.exports = function () {
                 blurCSS.width = bgWidth + 'px';
                 blurCSS.transform = 'translate(-50%,' + transformY + 'px)';
             }
-        }
+        };
     })();
 
     blur.set();
 
     window.onresize = function () {
         blur.set();
-    }
+    };
 
 };

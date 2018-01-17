@@ -60,13 +60,13 @@ block content
                     .contact-form__blur.js-blur-form
                     .contact-form
                         .subtitle.subtitle--contactform Связаться со мной
-                        form(action="server.php" method="post").form#form.form--contacts
+                        form(action="server.php" method="post").form#formContact.form--contacts.js-form
                             input.form__input(type="text" placeholder="Имя" name="name" required)
                             input.form__input(type="email" placeholder="Email" name="email" required)
                             textarea.form__input.form__input--textarea(placeholder="Ваше сообщение" name="message" required)
                             .form__buttons
-                                button.form__button.form__button--submit(type="submit" name="submit") Отправить
-                                button.form__button.form__button--reset(type="reset" name="reset") Очистить
+                                button.form__button.form__button--submit(type="submit") Отправить
+                                button.form__button.form__button--reset(type="reset") Очистить
                     .contact-form__status.js-contact-status Сообщение отправлено
                         button.contact-form__status-btn.js-close(type="button" name="close") Закрыть
                 .form__policy Нажимая на кнопку, Вы даете согласие на обработку Ваших персональных данных и соглашаетесь с <a href="./policy.html"> Политикой конфиденциальности</a>
@@ -75,3 +75,4 @@ block content
                         use(xlink:href="img/icons/symbol/sprite.svg#portf_arrow_up")
 
         include ../common/footer.pug
+    script(src='js/main.min.js')

@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-module.exports = $(function () {
+module.exports = function () {
     var submitForm = function (e) {
         e.preventDefault();
         
@@ -19,8 +19,9 @@ module.exports = $(function () {
             var mes = msg.mes,
             status = msg.status;
             if (status === 'OK') {
-                $('.modal').addClass('active');
-                /*alert (mes);*/
+                $('.js-contact-status').addClass('show');
+                //alert (mes);
+                //console.log(form[0]);
                 form[0].reset();
             } else {
                 alert(mes);
@@ -33,8 +34,8 @@ module.exports = $(function () {
             form[0].reset();
         });
 
-    }
+    };
 
-    $('#form').on('submit', submitForm);
+    $('#formContact').on('submit', submitForm);
     
-})
+};

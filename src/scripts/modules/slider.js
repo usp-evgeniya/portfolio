@@ -23,17 +23,17 @@
             }, {
                 subtitle: "Дизайн интернет-магазина лабораторного оборудования",
                 techs: "Продуманная структура, простой и понятный дизайн, реализация адаптивных версий",
-                link: "http://colibri-web.ru/dizayn-internet-magazina-laboratornogo-oborudovaniya/",
+                link: "https://morozovaey.myportfolio.com/dizayn-internet-magazina-laboratornogo-oborudovaniya/",
                 img: "img/content/works/laboratory.png",
             }, {
                 subtitle: "Редизайн лендинга по ремонту квартир",
                 techs: "Спокойная цветовая гамма, понятная структура, четкие описания",
-                link: "http://colibri-web.ru/redizayn-lendinga-po-remontu-kvartir",
+                link: "https://morozovaey.myportfolio.com/redizayn-lendinga-po-remontu-kvartir",
                 img: "img/content/works/home_repair.png",
             }, {
                 subtitle: "Редизайн лендинга школы танцев Pole Dance",
                 techs: "Четкая структура, привлекательный яркий дизайн, бизнес-подход",
-                link: "http://colibri-web.ru/redizayn-lendinga-shkoly-tantsev-pole-dance",
+                link: "https://morozovaey.myportfolio.com/redizayn-lendinga-shkoly-tantsev-pole-dance",
                 img: "img/content/works/pole_dance.png",
             }, {
                 subtitle: "Создание корпоративного сайта компании по математическому моделированию",
@@ -48,8 +48,7 @@
             }
         ];
    
-        var slider = document.querySelector('.js-slider'),
-            showingSlide = document.querySelector('.js-slide-img'),
+        var showingSlide = document.querySelector('.js-slide-img'),
             nextSlide = document.querySelector('.js-slide-next'),
             prevSlide = document.querySelector('.js-slide-prev'),
             btnPrev = document.querySelector('.js-btn-prev'),
@@ -89,17 +88,17 @@
     
             fillSlider();
     
-        btnNext.addEventListener('click', function(e){
+        btnNext.addEventListener('click', function(){
             currentSlide = slideLimiter(currentSlide + 1);
             //showingSlide.classList.add('animate');
             fillSlider();
             //showingSlide.classList.remove('animate');
         });
     
-        btnPrev.addEventListener('click', function(e){
+        btnPrev.addEventListener('click', function(){
             currentSlide = slideLimiter(currentSlide - 1);
             fillSlider();
         });
     
-    }
+    };
 

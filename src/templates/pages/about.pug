@@ -23,7 +23,7 @@ block content
                                 use(xlink:href="img/icons/symbol/sprite.svg#about_header")
                         .about__details
                             .about__photo
-                                img.about__img(src='img/content/My_image.jpg' alt="Веб-разработчик")
+                                img.about__img(src='img/content/my_image.jpg' alt="Веб-разработчик")
                             h2.subtitle--about.subtitle Кто я
                             .about__text.text
                                 p Меня зовут Морозова Евгения. Я занимаюсь веб-дизайном и веб-разработкой — создаю сайты и помогаю хорошим компаниям развиваться, позиционировать себя и привлекать целевую аудиторию. 
@@ -67,5 +67,6 @@ block content
                                     use(xlink:href=`img/icons/symbol/sprite.svg#${item.svg}`)
                                 a.contacts__link(href=`${item.link}`) #{item.contact}
         include ../common/footer.pug
+    script(src='js/main.min.js')
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8yfmr5iCoJlQlgOHbQxy473Yb7sja91U&callback=initMap" async defer)
 

@@ -1,4 +1,4 @@
-const $ = require('jquery');
+var $ = require('jquery');
 
 module.exports = $(function(){
     $('.js-btn-auth').on('click',function (e) {

@@ -10,7 +10,7 @@ module.exports = function(){
             var bottomBorder = scrollTop + windowMargin - bottomEdge;
 
             return topBorder <=0 && bottomBorder <= 0;
-        }
+        };
 
         return {
             init : function() {
@@ -36,10 +36,10 @@ module.exports = function(){
 
                         each();
 
-                    };
+                    }
                 });
             }
-        }
+        };
 
     }());
 
