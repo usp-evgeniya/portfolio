@@ -43,11 +43,20 @@ module.exports = function(){
                     var scrollTop = $(window).scrollTop();
                     var article = defineArticle(articles);
                     var fixedPosition = $('.js-section-articles').offset().top;
-                    
+                    var contentHeight = $('.js-section-articles').innerHeight();
+                    var sidebarHeight = $('.js-blog-sidebar').height();
+                    var sidebarBottomPos = contentHeight + fixedPosition - scrollTop;
+
                     if (scrollTop >= fixedPosition) {
                         $('.js-blog-sidebar').addClass('fixed');
                     } else {
                         $('.js-blog-sidebar').removeClass('fixed');
+                    }
+
+                    if (sidebarHeight >= sidebarBottomPos) {
+                        $('.js-blog-sidebar').addClass('bottom');
+                    } else {
+                        $('.js-blog-sidebar').removeClass('bottom');
                     }
                     
                     if (article.nextArticle.length) {

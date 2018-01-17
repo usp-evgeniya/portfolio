@@ -1,19 +1,16 @@
 .articles {
     grid-area: articles;
     display: flex;
-    padding-bottom: 150px;
 
     @include tablets {
         padding-left: 24px;
         padding-right: 24px;
-        padding-bottom: 234px;
     }
 
     
     @include phones {
         padding-left: 2.5%;
         padding-right: 2.5%;
-        padding-bottom: 264px;
     }
 }
 

@@ -18,8 +18,22 @@
     }
 }
 
+.blog__sidebar.bottom {
+    position: absolute;
+    bottom: 170px;
+    top: auto;
+    width: 34%;
+
+    @include desktop-large {
+        width: 26.5%;
+
+    }
+
+}
+
 .blog__list {
     margin-top: 70px;
+    margin-bottom: 70px;
     margin-right: 100px;
     width: 75%
 }

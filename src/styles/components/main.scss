@@ -71,6 +71,7 @@
     grid-template-areas: 
     "heroBlog heroBlog"
     "sidebar articles";
+    margin-bottom: 170px;
 
     @include desktop-large {
         grid-template-columns: 26.5% 73.5%;
@@ -83,10 +84,12 @@
         grid-template-areas: 
         "heroBlog"
         "articles";
+        margin-bottom: 235px;
     }
 
     @include phones {
         grid-template-rows: 98vh 100% 100%;
+        margin-bottom: 264px;
     }
 }
 

@@ -44,7 +44,6 @@
 .preloader__icon circle {
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    //transform: rotateZ(-90deg);
     animation: spin 2s linear infinite;
     animation-fill-mode: forwards;
 }
